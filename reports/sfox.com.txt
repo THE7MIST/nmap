@@ -1,0 +1,91 @@
+# Nmap 7.98 scan initiated Thu Jun 11 20:00:57 2026 as: nmap -sS -sV -O -Pn --reason --traceroute --version-all --script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 --min-rate 1000 -p 1-49152 -oX reports/sfox.com.xml -oN reports/sfox.com.txt -oG reports/sfox.com.gnmap sfox.com
+Nmap scan report for sfox.com (104.18.20.120)
+Host is up, received user-set (0.010s latency).
+Other addresses for sfox.com (not scanned): 104.18.21.120
+Not shown: 49148 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    REASON         VERSION
+80/tcp   open   http       syn-ack ttl 51 Cloudflare http proxy
+|_http-server-header: cloudflare
+113/tcp  closed ident      reset ttl 63
+443/tcp  open   ssl/http   syn-ack ttl 51 Cloudflare http proxy
+| http-headers: 
+|   Date: Thu, 11 Jun 2026 09:02:32 GMT
+|   Content-Type: text/html; charset=UTF-8
+|   Content-Length: 143
+|   Connection: close
+|   Location: https://www.sfox.com/
+|   Strict-Transport-Security: max-age=2592000
+|   X-Content-Type-Options: nosniff
+|   set-cookie: __cf_bm=piLGJpC_TDrfRHx4gWyTWQNGVtaD5Zq8P.Ef305me3Q-1781168552.3979647-1.0.1.1-2btNY9_OKJ763aitPhX4x5ecbJp8MtW8WWggiZHyIirzpqoVslXf46kY.Is1qeJ7rCZTu0HFKH7jIFJz8NrXPOnzz4_dq.GK..Scj9PLbOpgnskGuHcWR.kzQE4dzvy2; HttpOnly; SameSite=None; Secure; Path=/; Domain=sfox.com; Expires=Thu, 11 Jun 2026 09:32:32 GMT
+|   Server: cloudflare
+|   CF-RAY: a09f6ffc7bebcf85-DEL
+|   
+|_  (Request type: GET)
+|_http-server-header: cloudflare
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A
+|     cipher preference: client
+|_  least strength: A
+| ssl-cert: Subject: commonName=sfox.com
+| Subject Alternative Name: DNS:*.qa01.sfox.com, DNS:*.qa0201.sfox.com, DNS:*.qa03.sfox.com, DNS:*.sfox.com, DNS:*.staging.sfox.com, DNS:sfox.com
+| Not valid before: 2026-05-24T15:46:36
+|_Not valid after:  2026-08-22T15:46:35
+|_http-title: Did not follow redirect to https://www.sfox.com/
+8020/tcp open   http-proxy syn-ack ttl 63 FortiGuard Web Filtering
+| http-headers: 
+|   Content-Length: 4499
+|   Connection: close
+|   Cache-Control: no-cache
+|   Content-Type: text/html; charset=utf-8
+|   X-Frame-Options: SAMEORIGIN
+|   X-XSS-Protection: 1; mode=block
+|   X-Content-Type-Options: nosniff
+|   Content-Security-Policy: frame-ancestors 'self'
+|   
+|_  (Request type: GET)
+|_http-title: Web Filter Block Override
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+Device type: general purpose
+Running (JUST GUESSING): FreeBSD 12.X (87%), Apple macOS 11.X (86%)
+OS CPE: cpe:/o:freebsd:freebsd:12 cpe:/o:apple:mac_os_x:11
+Aggressive OS guesses: FreeBSD 12.1-RELEASE - 12.2-RELEASE (87%), FreeBSD 12.1-STABLE (87%), Apple macOS 11 (Big Sur) (Darwin 20.6.0) (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT     ADDRESS
+1   0.55 ms _gateway (192.168.74.254)
+2   0.23 ms 104.18.20.120
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 11 20:03:34 2026 -- 1 IP address (1 host up) scanned in 157.58 seconds

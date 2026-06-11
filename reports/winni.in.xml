@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jun 11 20:03:57 2026 as: nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/winni.in.xml -oN reports/winni.in.txt -oG reports/winni.in.gnmap winni.in -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/winni.in.xml -oN reports/winni.in.txt -oG reports/winni.in.gnmap winni.in" start="1781188437" startstr="Thu Jun 11 20:03:57 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="49152" services="1-49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1781188438" endtime="1781189062"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="15.207.152.55" addrtype="ipv4"/>
+<hostnames>
+<hostname name="winni.in" type="user"/>
+<hostname name="ec2-15-207-152-55.ap-south-1.compute.amazonaws.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="49146">
+<extrareasons reason="no-response" count="49146" proto="tcp" ports="1-79,81-112,114-442,444-1999,2001-5059,5061-8019,8021-49152"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="242"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-server-header" output="&#xa;  awselb/2.0&#xa;  nginx/1.18.0 (Ubuntu)"><elem>awselb/2.0</elem>
+<elem>nginx/1.18.0 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="242"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-headers" output="&#xa;  Server: awselb/2.0&#xa;  Date: Thu, 11 Jun 2026 09:13:16 GMT&#xa;  Content-Type: text/html&#xa;  Content-Length: 134&#xa;  Connection: close&#xa;  Location: https://www.winni.in:443/&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-title" output="Did not follow redirect to https://www.winni.in:443/"><elem key="redirect_url">https://www.winni.in:443/</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="tls-alpn" output="&#xa;  h2&#xa;  http/1.1"><elem>h2</elem>
+<elem>http/1.1</elem>
+</script><script id="ssl-cert" output="Subject: commonName=*.winni.in&#xa;Subject Alternative Name: DNS:*.winni.in, DNS:winni.in&#xa;Not valid before: 2025-08-22T00:00:00&#xa;Not valid after:  2026-09-19T23:59:59"><table key="subject">
+<elem key="commonName">*.winni.in</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Amazon RSA 2048 M03</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Amazon</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">AA53561BCA8ABA92E18B83381A5EC3EDC81D14B8CD155F0420F8A774E85C082A9DFA0EAE1B960E47CA33EFEB0879F84F20C98E38D4912800B561FE6265128B12079443F440E31884C3795BA459F6CA2367317571AD8A53375EC2FF3183F95D0A2DBE75AA3987538A7A61CBF27608286976AF6ECF08DF73A9F926BABA96506801FE6DD5C5607884789198638E78B6738EBB1A26DFF1C3C239A4CB472281A666487CB0F52314EE7D47AE8CE5BDC53EB2639906E929987BBD92D3E5EA813BC1F88E604E1381463C43C8FC7FAC522614D5A01470EAC166C69E261D5B95D1EDD7E6A0D6619B5B331B05B39D228F3DF31FA60E629BBBBD13EA0DB346A65486574C30FD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">55:D9:18:5F:D2:1C:CC:01:E1:58:B4:BE:AB:D9:55:42:01:D7:2E:02</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">D4:B9:B1:B6:13:BE:A8:C7:98:92:69:97:93:73:7D:E5:DE:35:00:29</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:*.winni.in, DNS:winni.in</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://crl.r2m03.amazontrust.com/r2m03.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://ocsp.r2m03.amazontrust.com&#xa;CA Issuers - URI:http://crt.r2m03.amazontrust.com/r2m03.cer</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : D7:6D:7D:10:D1:A7:F5:77:C2:C7:E9:5F:D7:00:BF:F9:&#xa;                82:C9:33:5A:65:E1:D0:B3:01:73:17:C0:C8:C5:69:77&#xa;    Timestamp : Aug 22 00:18:15.970 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:1B:73:24:18:47:81:10:3E:54:67:F0:CF:&#xa;                19:B7:15:68:23:01:35:F0:F9:16:DE:39:C4:72:99:39:&#xa;                91:73:9F:52:02:20:31:07:37:C3:15:C3:95:9A:32:9D:&#xa;                D6:38:02:30:57:B1:07:D0:03:25:4B:B0:7B:29:CC:80:&#xa;                30:04:E6:4A:8F:CF&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : C2:31:7E:57:45:19:A3:45:EE:7F:38:DE:B2:90:41:EB:&#xa;                C7:C2:21:5A:22:BF:7F:D5:B5:AD:76:9A:D9:0E:52:CD&#xa;    Timestamp : Aug 22 00:18:16.015 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:26:46:68:8A:76:E9:CC:2B:D2:80:9C:C9:&#xa;                F9:E6:54:C5:85:8E:85:F6:CF:5D:84:B7:C6:6C:48:A6:&#xa;                5C:B0:D6:78:02:20:0A:E5:13:74:FA:2B:39:F0:53:52:&#xa;                C4:0E:78:D7:9A:1D:F7:F1:00:DF:9D:BA:46:1A:AB:3A:&#xa;                4F:48:3A:49:A7:2E&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 94:4E:43:87:FA:EC:C1:EF:81:F3:19:24:26:A8:18:65:&#xa;                01:C7:D3:5F:38:02:01:3F:72:67:7D:55:37:2E:19:D8&#xa;    Timestamp : Aug 22 00:18:16.030 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:B0:36:77:44:FF:AD:AB:55:11:7B:B5:&#xa;                3A:56:BD:34:F9:0D:0E:5A:53:A8:88:62:C6:3F:F3:C9:&#xa;                FC:C9:F1:5B:A1:02:21:00:D8:15:13:AB:91:B7:DB:BA:&#xa;                7C:84:9D:A7:44:D1:3F:76:19:9B:68:E8:E1:93:39:25:&#xa;                2C:3F:24:A0:7D:25:D0:F6</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-08-22T00:00:00</elem>
+<elem key="notAfter">2026-09-19T23:59:59</elem>
+</table>
+<elem key="md5">011decc22298982e66a4147e0710190e</elem>
+<elem key="sha1">f07f4ab867e4951b1b147f639da22fff6aa1a0d7</elem>
+<elem key="sha256">290e03e9e8832ca45b8e0b8d0697e858dc09b2c07d5ae6afcbd1a3975290f154</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFvzCCBKegAwIBAgIQB0tmhZwPqDmAe8NhY0Mt0jANBgkqhkiG9w0BAQsFADA8&#xa;MQswCQYDVQQGEwJVUzEPMA0GA1UEChMGQW1hem9uMRwwGgYDVQQDExNBbWF6b24g&#xa;UlNBIDIwNDggTTAzMB4XDTI1MDgyMjAwMDAwMFoXDTI2MDkxOTIzNTk1OVowFTET&#xa;MBEGA1UEAwwKKi53aW5uaS5pbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBAKpTVhvKirqS4YuDOBpew+3IHRS4zRVfBCD4p3ToXAgqnfoOrhuWDkfKM+/r&#xa;CHn4TyDJjjjUkSgAtWH+YmUSixIHlEP0QOMYhMN5W6RZ9sojZzF1ca2KUzdewv8x&#xa;g/ldCi2+dao5h1OKemHL8nYIKGl2r27PCN9zqfkmurqWUGgB/m3VxWB4hHiRmGOO&#xa;eLZzjrsaJt/xw8I5pMtHIoGmZkh8sPUjFO59R66M5b3FPrJjmQbpKZh7vZLT5eqB&#xa;O8H4jmBOE4FGPEPI/H+sUiYU1aAUcOrBZsaeJh1bldHt1+ag1mGbWzMbBbOdIo89&#xa;8x+mDmKbu70T6g2zRqZUhldMMP0CAwEAAaOCAuIwggLeMB8GA1UdIwQYMBaAFFXZ&#xa;GF/SHMwB4Vi0vqvZVUIB1y4CMB0GA1UdDgQWBBTUubG2E76ox5iSaZeTc33l3jUA&#xa;KTAfBgNVHREEGDAWggoqLndpbm5pLmluggh3aW5uaS5pbjATBgNVHSAEDDAKMAgG&#xa;BmeBDAECATAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwOwYD&#xa;VR0fBDQwMjAwoC6gLIYqaHR0cDovL2NybC5yMm0wMy5hbWF6b250cnVzdC5jb20v&#xa;cjJtMDMuY3JsMHUGCCsGAQUFBwEBBGkwZzAtBggrBgEFBQcwAYYhaHR0cDovL29j&#xa;c3AucjJtMDMuYW1hem9udHJ1c3QuY29tMDYGCCsGAQUFBzAChipodHRwOi8vY3J0&#xa;LnIybTAzLmFtYXpvbnRydXN0LmNvbS9yMm0wMy5jZXIwDAYDVR0TAQH/BAIwADCC&#xa;AX0GCisGAQQB1nkCBAIEggFtBIIBaQFnAHUA1219ENGn9XfCx+lf1wC/+YLJM1pl&#xa;4dCzAXMXwMjFaXcAAAGYzyPxIgAABAMARjBEAiAbcyQYR4EQPlRn8M8ZtxVoIwE1&#xa;8PkW3jnEcpk5kXOfUgIgMQc3wxXDlZoyndY4AjBXsQfQAyVLsHspzIAwBOZKj88A&#xa;dQDCMX5XRRmjRe5/ON6ykEHrx8IhWiK/f9W1rXaa2Q5SzQAAAZjPI/FPAAAEAwBG&#xa;MEQCICZGaIp26cwr0oCcyfnmVMWFjoX2z12Et8ZsSKZcsNZ4AiAK5RN0+is58FNS&#xa;xA5415od9/EA3526RhqrOk9IOkmnLgB3AJROQ4f67MHvgfMZJCaoGGUBx9NfOAIB&#xa;P3JnfVU3LhnYAAABmM8j8V4AAAQDAEgwRgIhALA2d0T/ratVEXu1Ola9NPkNDlpT&#xa;qIhixj/zyfzJ8VuhAiEA2BUTq5G327p8hJ2nRNE/dhmbaOjhkzklLD8koH0l0PYw&#xa;DQYJKoZIhvcNAQELBQADggEBAHkuNiZXEjNergY5TXsawLrvaQzbyNH6SMeozL7n&#xa;djf5W5ljBcWIlbc0i9H/SkFc11BbtLS+fdFS0dIZMAmUESGqh0wVo8LXusMUqaJQ&#xa;Gc8KPW2nZ3wDWMWPwxYkBZ5+UjbpGAWhfJncffRf8cKhzrK9jSRlz/YqJKi9bYI5&#xa;aMtWRJ++IDXxNKAwx5dmp0YouslA5+7dWc1XPaTbaIsUO4ZlqlfzW5K0CdbCOplj&#xa;XaqSbD8iJzvAS+gO+FB/JXKk7qIHOCg3ClICRiC+9pQoDvT8N2aWYwfqc+OylmF5&#xa;+jDPRht8OegdRgcRqJlj4qd6BEYGSFMPH9P1Uu4+zhIb7VM=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-server-header" output="&#xa;  awselb/2.0&#xa;  nginx/1.18.0 (Ubuntu)"><elem>awselb/2.0</elem>
+<elem>nginx/1.18.0 (Ubuntu)</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.3: &#xa;    ciphers: &#xa;      TLS_AKE_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_AKE_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.3">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_AKE_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_AKE_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_AKE_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="tls-nextprotoneg" output="&#xa;  h2&#xa;  http/1.1"><elem>h2</elem>
+<elem>http/1.1</elem>
+</script></port>
+<port protocol="tcp" portid="2000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="cisco-sccp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5060"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="sip" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="FortiGuard Web Filtering" method="probed" conf="10"/><script id="http-open-proxy" output="Potentially OPEN proxy.&#xa;Methods supported:CONNECTION"/><script id="http-headers" output="&#xa;  Content-Length: 4499&#xa;  Connection: close&#xa;  Cache-Control: no-cache&#xa;  Content-Type: text/html; charset=utf-8&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  X-XSS-Protection: 1; mode=block&#xa;  X-Content-Type-Options: nosniff&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-title" output="Web Filter Block Override"><elem key="title">Web Filter Block Override</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="113"/>
+<osmatch name="Linux 4.2" accuracy="85" line="70684">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="85"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1377007" lastboot="Tue May 26 21:44:15 2026"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="2071A8,EE88A921,E143D27B,7215B4A,7E1ECE4C,D92B6ECA"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="521258AF,52125914,52125978,521259DC,52125A41,52125AA4"/>
+<trace port="113" proto="tcp">
+<hop ttl="1" ipaddr="192.168.74.254" rtt="14.27" host="_gateway"/>
+<hop ttl="2" ipaddr="15.207.152.55" rtt="0.30" host="ec2-15-207-152-55.ap-south-1.compute.amazonaws.com"/>
+</trace>
+<times srtt="2430" rttvar="3507" to="100000"/>
+</host>
+<runstats><finished time="1781189062" timestr="Thu Jun 11 20:14:22 2026" summary="Nmap done at Thu Jun 11 20:14:22 2026; 1 IP address (1 host up) scanned in 625.02 seconds" elapsed="625.02" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

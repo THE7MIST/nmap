@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jun 11 19:58:17 2026 as: nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/coinsbit.io.xml -oN reports/coinsbit.io.txt -oG reports/coinsbit.io.gnmap coinsbit.io -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/coinsbit.io.xml -oN reports/coinsbit.io.txt -oG reports/coinsbit.io.gnmap coinsbit.io" start="1781188097" startstr="Thu Jun 11 19:58:17 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="49152" services="1-49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1781188098" endtime="1781188253"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="172.67.222.133" addrtype="ipv4"/>
+<hostnames>
+<hostname name="coinsbit.io" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="49148">
+<extrareasons reason="no-response" count="49148" proto="tcp" ports="1-79,81-112,114-442,444-8019,8021-49152"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Cloudflare http proxy" method="probed" conf="10"/><script id="http-server-header" output="cloudflare"><elem>cloudflare</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Cloudflare http proxy" tunnel="ssl" method="probed" conf="10"/><script id="ssl-cert" output="Subject: commonName=coinsbit.io&#xa;Subject Alternative Name: DNS:coinsbit.io, DNS:*.coinsbit.io&#xa;Not valid before: 2026-04-17T13:59:37&#xa;Not valid after:  2026-07-16T14:59:34"><table key="subject">
+<elem key="commonName">coinsbit.io</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">WE1</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Google Trust Services</elem>
+</table>
+<table key="pubkey">
+<elem key="type">ec</elem>
+<elem key="bits">256</elem>
+<table key="ecdhparams">
+<table key="curve_params">
+<elem key="ec_curve_type">namedcurve</elem>
+<elem key="curve">prime256v1</elem>
+</table>
+</table>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">BA:05:A1:92:1E:C6:F5:6E:81:B8:24:49:91:99:23:88:AB:CC:6E:16</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">90:77:92:35:67:C4:FF:A8:CC:A9:E6:7B:D9:80:79:7B:CC:93:F9:38</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://o.pki.goog/s/we1/mfY&#xa;CA Issuers - URI:http://i.pki.goog/we1.crt</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:coinsbit.io, DNS:*.coinsbit.io</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://c.pki.goog/we1/ER6WRo4TM5k.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : D7:6D:7D:10:D1:A7:F5:77:C2:C7:E9:5F:D7:00:BF:F9:&#xa;                82:C9:33:5A:65:E1:D0:B3:01:73:17:C0:C8:C5:69:77&#xa;    Timestamp : Apr 17 14:59:38.204 2026 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:2E:2F:80:00:DE:AF:E6:A8:87:DE:61:39:&#xa;                FD:CF:2F:22:0A:F5:0A:B6:D6:A5:D1:EE:A3:98:C0:2E:&#xa;                42:20:AA:A7:02:21:00:D2:73:9D:9C:85:0B:1B:0B:23:&#xa;                B4:7B:27:43:87:F1:E4:DF:23:4C:B7:FC:84:51:CB:88:&#xa;                CF:D2:06:2A:22:62:E0&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : CB:38:F7:15:89:7C:84:A1:44:5F:5B:C1:DD:FB:C9:6E:&#xa;                F2:9A:59:CD:47:0A:69:05:85:B0:CB:14:C3:14:58:E7&#xa;    Timestamp : Apr 17 14:59:38.267 2026 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:06:49:AC:F0:85:F4:F0:36:F1:B4:1C:F1:&#xa;                E1:0F:6D:CB:9D:C3:4A:61:B1:8A:DE:13:E6:93:B4:04:&#xa;                9C:F2:37:66:02:20:28:5A:CD:08:C5:D9:BA:1F:F0:29:&#xa;                31:F7:B2:E1:CC:6D:AA:10:4B:9E:13:A0:1C:67:CD:3B:&#xa;                26:FA:8E:64:B4:5B</elem>
+</table>
+</table>
+<elem key="sig_algo">ecdsa-with-SHA256</elem>
+<table key="validity">
+<elem key="notBefore">2026-04-17T13:59:37</elem>
+<elem key="notAfter">2026-07-16T14:59:34</elem>
+</table>
+<elem key="md5">b180a63900186cca3db24552a45760ff</elem>
+<elem key="sha1">d90717b8311da15b3eff0a136ceacc4fbe86633c</elem>
+<elem key="sha256">1313bc357ec74afa6a7ab294c8d2802ef89883c5835b6261cebe4d04a6df7527</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDpDCCA0qgAwIBAgIRAJn2SLmEiE3fEyRK88W4RhMwCgYIKoZIzj0EAwIwOzEL&#xa;MAkGA1UEBhMCVVMxHjAcBgNVBAoTFUdvb2dsZSBUcnVzdCBTZXJ2aWNlczEMMAoG&#xa;A1UEAxMDV0UxMB4XDTI2MDQxNzEzNTkzN1oXDTI2MDcxNjE0NTkzNFowFjEUMBIG&#xa;A1UEAxMLY29pbnNiaXQuaW8wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAS90m4l&#xa;RVm3loQ/o1XZpViUXFSes14ONZ4GfSVWyKC16A0u3VnXDivAHY5nrI14rkX3jvcO&#xa;uU7Z5RHcF082jXYuo4ICUjCCAk4wDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoG&#xa;CCsGAQUFBwMBMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFLoFoZIexvVugbgkSZGZ&#xa;I4irzG4WMB8GA1UdIwQYMBaAFJB3kjVnxP+ozKnme9mAeXvMk/k4MF4GCCsGAQUF&#xa;BwEBBFIwUDAnBggrBgEFBQcwAYYbaHR0cDovL28ucGtpLmdvb2cvcy93ZTEvbWZZ&#xa;MCUGCCsGAQUFBzAChhlodHRwOi8vaS5wa2kuZ29vZy93ZTEuY3J0MCUGA1UdEQQe&#xa;MByCC2NvaW5zYml0Lmlvgg0qLmNvaW5zYml0LmlvMBMGA1UdIAQMMAowCAYGZ4EM&#xa;AQIBMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9jLnBraS5nb29nL3dlMS9FUjZX&#xa;Um80VE01ay5jcmwwggEDBgorBgEEAdZ5AgQCBIH0BIHxAO8AdgDXbX0Q0af1d8LH&#xa;6V/XAL/5gskzWmXh0LMBcxfAyMVpdwAAAZ2b9GRcAAAEAwBHMEUCIC4vgADer+ao&#xa;h95hOf3PLyIK9Qq21qXR7qOYwC5CIKqnAiEA0nOdnIULGwsjtHsnQ4fx5N8jTLf8&#xa;hFHLiM/SBioiYuAAdQDLOPcViXyEoURfW8Hd+8lu8ppZzUcKaQWFsMsUwxRY5wAA&#xa;AZ2b9GSbAAAEAwBGMEQCIAZJrPCF9PA28bQc8eEPbcudw0phsYreE+aTtASc8jdm&#xa;AiAoWs0Ixdm6H/ApMfey4cxtqhBLnhOgHGfNOyb6jmS0WzAKBggqhkjOPQQDAgNI&#xa;ADBFAiA446fg51AQuzb2vc4o3C2BnNmCe0B5/uKvZ7E/9KnkGgIhALw6m1iy45C5&#xa;aVVNeqdtLfzMu9W9kjtv9Cu8bfVRp6Wz&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-generator" output="WordPress 7.0"/><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/><script id="http-headers" output="&#xa;  Date: Thu, 11 Jun 2026 08:59:51 GMT&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  Connection: close&#xa;  Server: cloudflare&#xa;  Link: &lt;https://coinsbit.io/wp-json/&gt;; rel=&quot;https://api.w.org/&quot;, &lt;https://coinsbit.io/wp-json/wp/v2/pages/10&gt;; rel=&quot;alternate&quot;; title=&quot;JSON&quot;; type=&quot;application/json&quot;, &lt;https://coinsbit.io/&gt;; rel=shortlink&#xa;  Nel: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;success_fraction&quot;:0.0,&quot;max_age&quot;:604800}&#xa;  Cf-Cache-Status: DYNAMIC&#xa;  Server-Timing: cfCacheStatus;desc=&quot;DYNAMIC&quot;&#xa;  Server-Timing: cfEdge;dur=276,cfOrigin;dur=41&#xa;  Report-To: {&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://a.nel.cloudflare.com/report/v4?s=beLur2BABraaWze6mHBHzMkpVqXlcR0hdNbsE%2FW2Xk8DsIogZFVG2WNbuASO8hVTvD2gKA0il%2F8B%2BEQh7ABIEF5MlZQEg%2FayQmeYrUBoMJlRJvO7SB8VHakLT4nqcQ%3D%3D&quot;}]}&#xa;  CF-RAY: a09f6c0ef80c867b-DEL&#xa;  alt-svc: h3=&quot;:443&quot;; ma=86400&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-title" output="Best Bitcoin Casinos - Play Epic Crypto Casino Games in 2026"><elem key="title">Best Bitcoin Casinos - Play Epic Crypto Casino Games in 2026</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  TLSv1.3: &#xa;    ciphers: &#xa;      TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<table key="TLSv1.3">
+<table key="ciphers">
+<table>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_AKE_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_AKE_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="strength">A</elem>
+<elem key="name">TLS_AKE_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="http-server-header" output="cloudflare"><elem>cloudflare</elem>
+</script></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="FortiGuard Web Filtering" method="probed" conf="10"/><script id="http-title" output="Web Filter Block Override"><elem key="title">Web Filter Block Override</elem>
+</script><script id="http-headers" output="&#xa;  Content-Length: 4502&#xa;  Connection: close&#xa;  Cache-Control: no-cache&#xa;  Content-Type: text/html; charset=utf-8&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  X-XSS-Protection: 1; mode=block&#xa;  X-Content-Type-Options: nosniff&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-open-proxy" output="Potentially OPEN proxy.&#xa;Methods supported:CONNECTION"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="113"/>
+<osmatch name="Android TV OS 11 (Linux 4.19)" accuracy="87" line="32550">
+<osclass type="media device" vendor="Google" osfamily="Android TV" osgen="11" accuracy="87"><cpe>cpe:/o:google:android_tv:11</cpe></osclass>
+<osclass type="media device" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:4.19</cpe></osclass>
+</osmatch>
+<osmatch name="QNAP QTS 5.0 (Linux 5.10)" accuracy="87" line="100705">
+<osclass type="storage-misc" vendor="QNAP" osfamily="QTS" osgen="5.X" accuracy="87"><cpe>cpe:/o:qnap:qts:5.0</cpe></osclass>
+<osclass type="storage-misc" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:5.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="86" line="59175">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Apple macOS 11 (Big Sur) (Darwin 20.3.0)" accuracy="85" line="7821">
+<osclass type="general purpose" vendor="Apple" osfamily="macOS" osgen="11.X" accuracy="85"><cpe>cpe:/o:apple:mac_os_x:11</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="2766478" lastboot="Sun May 10 19:32:55 2026"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="ECE17F56,AA5F0C14,B208A719,377B1F9C,4FB4CBDF,F0AED864"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="A4E40BA7,A4E40C0C,A4E40C6E,A4E40CDC,A4E40D36,A4E40D88"/>
+<trace port="113" proto="tcp">
+<hop ttl="1" ipaddr="192.168.74.254" rtt="0.48" host="_gateway"/>
+<hop ttl="2" ipaddr="172.67.222.133" rtt="0.24"/>
+</trace>
+<times srtt="11363" rttvar="18672" to="100000"/>
+</host>
+<runstats><finished time="1781188253" timestr="Thu Jun 11 20:00:53 2026" summary="Nmap done at Thu Jun 11 20:00:53 2026; 1 IP address (1 host up) scanned in 156.00 seconds" elapsed="156.00" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

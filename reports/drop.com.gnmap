@@ -1,0 +1,4 @@
+# Nmap 7.98 scan initiated Thu Jun 11 19:49:35 2026 as: nmap -sS -sV -O -Pn --reason --traceroute --version-all --script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 --min-rate 1000 -p 1-49152 -oX reports/drop.com.xml -oN reports/drop.com.txt -oG reports/drop.com.gnmap drop.com
+Host: 108.158.61.29 (server-108-158-61-29.bom78.r.cloudfront.net)	Status: Up
+Host: 108.158.61.29 (server-108-158-61-29.bom78.r.cloudfront.net)	Ports: 80/open/tcp//http//Amazon CloudFront httpd/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Amazon CloudFront httpd/, 8020/open/tcp//http-proxy//FortiGuard Web Filtering/	Ignored State: filtered (49148)	Seq Index: 262	IP ID Seq: All zeros
+# Nmap done at Thu Jun 11 19:52:08 2026 -- 1 IP address (1 host up) scanned in 153.50 seconds

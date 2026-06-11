@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jun 11 19:55:19 2026 as: nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/coindcx.com.xml -oN reports/coindcx.com.txt -oG reports/coindcx.com.gnmap coindcx.com -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/coindcx.com.xml -oN reports/coindcx.com.txt -oG reports/coindcx.com.gnmap coindcx.com" start="1781187919" startstr="Thu Jun 11 19:55:19 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="49152" services="1-49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1781187920" endtime="1781188075"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="104.18.12.22" addrtype="ipv4"/>
+<hostnames>
+<hostname name="coindcx.com" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="49148">
+<extrareasons reason="no-response" count="49148" proto="tcp" ports="1-79,81-112,114-442,444-8019,8021-49152"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Cloudflare http proxy" method="probed" conf="10"/><script id="http-server-header" output="cloudflare"><elem>cloudflare</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Cloudflare http proxy" tunnel="ssl" method="probed" conf="10"/><script id="http-headers" output="&#xa;  Date: Thu, 11 Jun 2026 08:56:52 GMT&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  Connection: close&#xa;  alt-svc: h3=&quot;:443&quot;; ma=86400&#xa;  cf-cache-status: DYNAMIC&#xa;  x-xss-protection: 1; mode=block&#xa;  content-security-policy: default-src &apos;self&apos;; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; https://www.googletagmanager.com https://www.google-analytics.com https://dis.criteo.com https://static.cloudflareinsights.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://dynamic.criteo.com https://googleads.g.doubleclick.net https://sslwidget.criteo.com https://www.googleadservices.com https://preproduction.coindcx.com https://coindcx.com https://code.jquery.com; style-src &apos;self&apos; &apos;unsafe-inline&apos; https://fonts.googleapis.com https://preproduction.coindcx.com https://coindcx.com; img-src &apos;self&apos; data: https://www.google-analytics.com https://dynamic.criteo.com https://sslwidget.criteo.com https://secure.gravatar.com https://coindcx.s3.amazonaws.com https://ps.w.org https://s.w.org https://www.google.com https://www.google.co.in https://qr-code.ithemes.com https://googleads.g.doubleclick.net https://preproduction.coindcx.com https://coindcx.com; font-src &apos;self&apos; https://fonts.googleapis.com https://fonts.gstatic.com data: https://coindcx.com; connect-src &apos;self&apos; https://measurement-api.criteo.com https://fledge.as.criteo.com https://gumi.criteo.com https://dis.criteo.com https://public.coindcx.com https://api.coindcx.com https://api.dcxstage.com https://www.google.com https://www.googleadservices.com https://www.google.co.in https://preproduction.coindcx.com https://coindcx.com https://analytics.google.com https://stats.g.doubleclick.net; frame-src &apos;self&apos; blob: https://sslwidget.criteo.com https://www.youtube.com https://td.doubleclick.net https://www.googletagmanager.com https://gumi.criteo.com https://fledge.criteo.com; object-src &apos;none&apos;; media-src &apos;self&apos; blob: https://preproduction.coindcx.com https://coindcx.com; worker-src &apos;self&apos; blob:; manifest-src &apos;self&apos;; base-uri &apos;self&apos;; form-action &apos;self&apos;; upgrade-insecure-requests;&#xa;  ki-cache-type: None&#xa;  ki-cf-cache-status: BYPASS&#xa;  ki-edge: v=28.3.0;mv=99.9.9&#xa;  ki-origin: g1p&#xa;  link: &lt;https://coindcx.com/wp-json/&gt;; rel=&quot;https://api.w.org/&quot;, &lt;https://coindcx.com/wp-json/wp/v2/pages/5563&gt;; rel=&quot;alternate&quot;; title=&quot;JSON&quot;; type=&quot;application/json&quot;, &lt;https://coindcx.com/&gt;; rel=shortlink&#xa;  nel: {&quot;success_fraction&quot;:0.01,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#xa;  permissions-policy: geolocation=(), microphone=(), camera=(), payment=()&#xa;  referrer-policy: strict-origin-when-cross-origin&#xa;  report-to: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v4?s=5%2BCtx4J91jsDkEJvue%2Fmw4d8lcv99bleEJ2s8HuJah0N%2Byt62auYxXs%2B99mXRBe5fm1%2BuF%2F6ZRhoAKa3%2FBjimMQboXGLJzpsHemnVBxxlefvA8KeFkP2ieqfWWHdFr2nWPixbEDYUg0V%2B6%2BePsQnKxtV&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}&#xa;  Server: cloudflare&#xa;  Speculation-Rules: &quot;/cdn-cgi/speculation&quot;&#xa;  vary: Accept-Encoding&#xa;  x-content-type-options: nosniff&#xa;  x-edge-location-klb: 1&#xa;  x-frame-options: SAMEORIGIN&#xa;  x-kinsta-cache: HIT&#xa;  set-cookie: __cf_bm=Ex4.qZmSsYEysEL.B6AioFdtxnqcLsPQmUV3iqlp_TI-1781168212.6186903-1.0.1.1-N1juL6CrgpGt2rRgFh6FWBaD4ADeYIsSn_rzr.F7jx2TEWDyoj8hTMXjmF3ryvBVtVPZkq1zRGC6y3v_CluMfykopNPv9NG6fDgXOV_l13aIRU5IRCicTdS4K8yN5jS9; HttpOnly; SameSite=None; Secure; Path=/; Domain=coindcx.com; Expires=Thu, 11 Jun 2026 09:26:52 GMT&#xa;  set-cookie: _cfuvid=da6k3LTei2VIRWP3wX4aa5bEmRWuM_hxw1N.X51x5tQ-1781168212.6186903-1.0.1.1-7UeSaynKybSbrcVmjT.LHXA37UYB.WXrh4CYVNYYcoU; HttpOnly; SameSite=None; Secure; Path=/; Domain=coindcx.com&#xa;  Server-Timing: cfCacheStatus;desc=&quot;DYNAMIC&quot;&#xa;  Server-Timing: cfEdge;dur=27,cfOrigin;dur=97&#xa;  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload&#xa;  CF-RAY: a09f67b0dd1e4bda-DEL&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-generator" output="WordPress 7.0"/><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  TLSv1.3: &#xa;    ciphers: &#xa;      TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">rsa 2048</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<table key="TLSv1.3">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_AKE_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_AKE_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="strength">A</elem>
+</table>
+<table>
+<elem key="name">TLS_AKE_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="strength">A</elem>
+</table>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="ssl-cert" output="Subject: commonName=coindcx.com&#xa;Subject Alternative Name: DNS:*.coindcx.com, DNS:*.engage.coindcx.com, DNS:coindcx.com&#xa;Not valid before: 2026-06-08T20:30:26&#xa;Not valid after:  2026-09-06T20:30:25"><table key="subject">
+<elem key="commonName">coindcx.com</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">YE2</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+</table>
+<table key="pubkey">
+<elem key="type">ec</elem>
+<elem key="bits">256</elem>
+<table key="ecdhparams">
+<table key="curve_params">
+<elem key="ec_curve_type">namedcurve</elem>
+<elem key="curve">prime256v1</elem>
+</table>
+</table>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">B4:82:58:A2:80:08:33:CE:47:AF:D5:0F:44:CA:38:B8:DF:23:51:76</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">B9:59:F2:8E:CF:22:F0:86:D3:37:48:FF:76:14:18:BA:82:D8:55:87</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:http://ye2.i.lencr.org/</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:*.coindcx.com, DNS:*.engage.coindcx.com, DNS:coindcx.com</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://ye2.c.lencr.org/100.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : C2:31:7E:57:45:19:A3:45:EE:7F:38:DE:B2:90:41:EB:&#xa;                C7:C2:21:5A:22:BF:7F:D5:B5:AD:76:9A:D9:0E:52:CD&#xa;    Timestamp : Jun  8 21:28:56.838 2026 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:21:00:B8:01:2B:3A:D9:73:91:61:C9:EA:8E:&#xa;                18:3B:FC:AC:73:24:CE:D1:6B:DA:18:0C:7B:E1:25:67:&#xa;                AD:86:C6:D1:DB:02:20:51:5F:82:A2:CC:CC:D5:7B:1B:&#xa;                05:70:15:66:D1:FB:CF:A3:3C:35:9D:22:77:F4:8D:DB:&#xa;                B7:BC:5F:B7:B7:8A:76&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 46:AF:86:3D:3B:3E:E5:9F:A5:77:DE:A8:24:5D:36:B0:&#xa;                D9:ED:22:A2:23:F4:61:77:41:22:94:52:EE:95:50:5F&#xa;    Timestamp : Jun  8 21:28:57.027 2026 GMT&#xa;    Extensions: 00:00:05:00:09:03:A8:E1&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:75:35:83:38:B2:24:7F:F1:95:76:D0:76:&#xa;                6F:7C:D6:5A:60:B5:32:D8:28:41:A8:4D:C9:5B:16:A2:&#xa;                14:EA:9F:3B:02:21:00:BA:04:B1:05:E1:01:4B:92:48:&#xa;                CD:B2:03:75:74:5F:AB:14:9A:FF:84:91:A5:74:C1:DB:&#xa;                6B:9B:80:7A:E6:93:93</elem>
+</table>
+</table>
+<elem key="sig_algo">ecdsa-with-SHA384</elem>
+<table key="validity">
+<elem key="notBefore">2026-06-08T20:30:26</elem>
+<elem key="notAfter">2026-09-06T20:30:25</elem>
+</table>
+<elem key="md5">2b61da6d89e1f51885d334fe078baa6e</elem>
+<elem key="sha1">fb7e67b08f5d62834e2aad15ad585605d66054bb</elem>
+<elem key="sha256">e9384abcbb80a13570a6756bb34169d0f9d2d3b0a27e0827212e21c0f7369498</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDqzCCAzCgAwIBAgISBfpCCK+xqpE9Oytxjn2+t3bjMAoGCCqGSM49BAMDMDMx&#xa;CzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQDEwNZ&#xa;RTIwHhcNMjYwNjA4MjAzMDI2WhcNMjYwOTA2MjAzMDI1WjAWMRQwEgYDVQQDEwtj&#xa;b2luZGN4LmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABKTIf1a64ajS6MVV&#xa;4+eerqKFHcCBMU3rACBaa//YbX4E+2bw7uHssSVz8v2n+W5tvkJJWbChbUGCqJ7y&#xa;QTIiBPijggI/MIICOzAOBgNVHQ8BAf8EBAMCB4AwEwYDVR0lBAwwCgYIKwYBBQUH&#xa;AwEwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUtIJYooAIM85Hr9UPRMo4uN8jUXYw&#xa;HwYDVR0jBBgwFoAUuVnyjs8i8IbTN0j/dhQYuoLYVYcwMwYIKwYBBQUHAQEEJzAl&#xa;MCMGCCsGAQUFBzAChhdodHRwOi8veWUyLmkubGVuY3Iub3JnLzA7BgNVHREENDAy&#xa;gg0qLmNvaW5kY3guY29tghQqLmVuZ2FnZS5jb2luZGN4LmNvbYILY29pbmRjeC5j&#xa;b20wEwYDVR0gBAwwCjAIBgZngQwBAgEwLwYDVR0fBCgwJjAkoCKgIIYeaHR0cDov&#xa;L3llMi5jLmxlbmNyLm9yZy8xMDAuY3JsMIIBDAYKKwYBBAHWeQIEAgSB/QSB+gD4&#xa;AHYAwjF+V0UZo0XufzjespBB68fCIVoiv3/Vta12mtkOUs0AAAGeqSOBBgAABAMA&#xa;RzBFAiEAuAErOtlzkWHJ6o4YO/yscyTO0WvaGAx74SVnrYbG0dsCIFFfgqLMzNV7&#xa;GwVwFWbR+8+jPDWdInf0jdu3vF+3t4p2AH4ARq+GPTs+5Z+ld96oJF02sNntIqIj&#xa;9GF3QSKUUu6VUF8AAAGeqSOBwwAIAAAFAAkDqOEEAwBHMEUCIHU1gziyJH/xlXbQ&#xa;dm981lpgtTLYKEGoTclbFqIU6p87AiEAugSxBeEBS5JIzbIDdXRfqxSa/4SRpXTB&#xa;22ubgHrmk5MwCgYIKoZIzj0EAwMDaQAwZgIxAP7zlD58VK3Llsug+voXBHlWEr4W&#xa;bo3bVvEqTv3tkxKbEfr9XXQQrbV63LjNnP2tagIxANRJiHFzDN3BMvExuCJZpTnH&#xa;eOeTxCmVdMEu81aOl93UJQdikeidLRqAIGAy5hRBSQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-title" output="Trade Bitcoin &amp;amp; Buy Crypto with CoinDCX Crypto App"><elem key="title">Trade Bitcoin &amp;amp; Buy Crypto with CoinDCX Crypto App</elem>
+</script><script id="http-robots.txt" output="44 disallowed entries (15 shown)&#xa;*/buy */sell */insta/buy */insta/sell /cdn-cgi/rum &#xa;*/buy/MATICINR */buy/BRISEINR */buy/DOGEINR */buy/REEFINR &#xa;*/buy/LCXINR */buy/XRPINR */buy/SHIBUSDT */buy/BTCINR */buy/SOLINR &#xa;*/buy/BABYDOGEUSDT"/><script id="http-server-header" output="cloudflare"><elem>cloudflare</elem>
+</script></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="FortiGuard Web Filtering" method="probed" conf="10"/><script id="http-open-proxy" output="Potentially OPEN proxy.&#xa;Methods supported:CONNECTION"/><script id="http-title" output="Web Filter Block Override"><elem key="title">Web Filter Block Override</elem>
+</script><script id="http-headers" output="&#xa;  Content-Length: 4502&#xa;  Connection: close&#xa;  Cache-Control: no-cache&#xa;  Content-Type: text/html; charset=utf-8&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  X-XSS-Protection: 1; mode=block&#xa;  X-Content-Type-Options: nosniff&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;&#xa;  &#xa;  (Request type: GET)&#xa;"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="113"/>
+<osmatch name="FreeBSD 12.1-RELEASE - 12.2-RELEASE" accuracy="87" line="28501">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="12.X" accuracy="87"><cpe>cpe:/o:freebsd:freebsd:12</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 12.1-STABLE" accuracy="87" line="28519">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="12.X" accuracy="87"><cpe>cpe:/o:freebsd:freebsd:12.1</cpe></osclass>
+</osmatch>
+<osmatch name="Apple macOS 11 (Big Sur) (Darwin 20.6.0)" accuracy="86" line="7875">
+<osclass type="general purpose" vendor="Apple" osfamily="macOS" osgen="11.X" accuracy="86"><cpe>cpe:/o:apple:mac_os_x:11</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="79" lastboot="Thu Jun 11 19:56:36 2026"/>
+<distance value="2"/>
+<tcpsequence index="259" difficulty="Good luck!" values="8C143742,E7F0A356,71A52955,32B3651,69364FE5,88B98F54"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="B727D7E3,93C0A18F,E3504918,13FFAB60,24B724E9,7C287FFE"/>
+<trace port="113" proto="tcp">
+<hop ttl="1" ipaddr="192.168.74.254" rtt="0.43" host="_gateway"/>
+<hop ttl="2" ipaddr="104.18.12.22" rtt="0.25"/>
+</trace>
+<times srtt="9320" rttvar="14781" to="100000"/>
+</host>
+<runstats><finished time="1781188075" timestr="Thu Jun 11 19:57:55 2026" summary="Nmap done at Thu Jun 11 19:57:55 2026; 1 IP address (1 host up) scanned in 156.29 seconds" elapsed="156.29" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

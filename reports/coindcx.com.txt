@@ -1,0 +1,117 @@
+# Nmap 7.98 scan initiated Thu Jun 11 19:55:19 2026 as: nmap -sS -sV -O -Pn --reason --traceroute --version-all --script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 --min-rate 1000 -p 1-49152 -oX reports/coindcx.com.xml -oN reports/coindcx.com.txt -oG reports/coindcx.com.gnmap coindcx.com
+Nmap scan report for coindcx.com (104.18.12.22)
+Host is up, received user-set (0.0093s latency).
+Other addresses for coindcx.com (not scanned): 104.18.13.22 2606:4700::6812:c16 2606:4700::6812:d16
+Not shown: 49148 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    REASON         VERSION
+80/tcp   open   http       syn-ack ttl 51 Cloudflare http proxy
+|_http-server-header: cloudflare
+113/tcp  closed ident      reset ttl 63
+443/tcp  open   ssl/http   syn-ack ttl 51 Cloudflare http proxy
+| http-headers: 
+|   Date: Thu, 11 Jun 2026 08:56:52 GMT
+|   Content-Type: text/html; charset=UTF-8
+|   Connection: close
+|   alt-svc: h3=":443"; ma=86400
+|   cf-cache-status: DYNAMIC
+|   x-xss-protection: 1; mode=block
+|   content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://dis.criteo.com https://static.cloudflareinsights.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://dynamic.criteo.com https://googleads.g.doubleclick.net https://sslwidget.criteo.com https://www.googleadservices.com https://preproduction.coindcx.com https://coindcx.com https://code.jquery.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://preproduction.coindcx.com https://coindcx.com; img-src 'self' data: https://www.google-analytics.com https://dynamic.criteo.com https://sslwidget.criteo.com https://secure.gravatar.com https://coindcx.s3.amazonaws.com https://ps.w.org https://s.w.org https://www.google.com https://www.google.co.in https://qr-code.ithemes.com https://googleads.g.doubleclick.net https://preproduction.coindcx.com https://coindcx.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com data: https://coindcx.com; connect-src 'self' https://measurement-api.criteo.com https://fledge.as.criteo.com https://gumi.criteo.com https://dis.criteo.com https://public.coindcx.com https://api.coindcx.com https://api.dcxstage.com https://www.google.com https://www.googleadservices.com https://www.google.co.in https://preproduction.coindcx.com https://coindcx.com https://analytics.google.com https://stats.g.doubleclick.net; frame-src 'self' blob: https://sslwidget.criteo.com https://www.youtube.com https://td.doubleclick.net https://www.googletagmanager.com https://gumi.criteo.com https://fledge.criteo.com; object-src 'none'; media-src 'self' blob: https://preproduction.coindcx.com https://coindcx.com; worker-src 'self' blob:; manifest-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;
+|   ki-cache-type: None
+|   ki-cf-cache-status: BYPASS
+|   ki-edge: v=28.3.0;mv=99.9.9
+|   ki-origin: g1p
+|   link: <https://coindcx.com/wp-json/>; rel="https://api.w.org/", <https://coindcx.com/wp-json/wp/v2/pages/5563>; rel="alternate"; title="JSON"; type="application/json", <https://coindcx.com/>; rel=shortlink
+|   nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+|   permissions-policy: geolocation=(), microphone=(), camera=(), payment=()
+|   referrer-policy: strict-origin-when-cross-origin
+|   report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=5%2BCtx4J91jsDkEJvue%2Fmw4d8lcv99bleEJ2s8HuJah0N%2Byt62auYxXs%2B99mXRBe5fm1%2BuF%2F6ZRhoAKa3%2FBjimMQboXGLJzpsHemnVBxxlefvA8KeFkP2ieqfWWHdFr2nWPixbEDYUg0V%2B6%2BePsQnKxtV"}],"group":"cf-nel","max_age":604800}
+|   Server: cloudflare
+|   Speculation-Rules: "/cdn-cgi/speculation"
+|   vary: Accept-Encoding
+|   x-content-type-options: nosniff
+|   x-edge-location-klb: 1
+|   x-frame-options: SAMEORIGIN
+|   x-kinsta-cache: HIT
+|   set-cookie: __cf_bm=Ex4.qZmSsYEysEL.B6AioFdtxnqcLsPQmUV3iqlp_TI-1781168212.6186903-1.0.1.1-N1juL6CrgpGt2rRgFh6FWBaD4ADeYIsSn_rzr.F7jx2TEWDyoj8hTMXjmF3ryvBVtVPZkq1zRGC6y3v_CluMfykopNPv9NG6fDgXOV_l13aIRU5IRCicTdS4K8yN5jS9; HttpOnly; SameSite=None; Secure; Path=/; Domain=coindcx.com; Expires=Thu, 11 Jun 2026 09:26:52 GMT
+|   set-cookie: _cfuvid=da6k3LTei2VIRWP3wX4aa5bEmRWuM_hxw1N.X51x5tQ-1781168212.6186903-1.0.1.1-7UeSaynKybSbrcVmjT.LHXA37UYB.WXrh4CYVNYYcoU; HttpOnly; SameSite=None; Secure; Path=/; Domain=coindcx.com
+|   Server-Timing: cfCacheStatus;desc="DYNAMIC"
+|   Server-Timing: cfEdge;dur=27,cfOrigin;dur=97
+|   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|   CF-RAY: a09f67b0dd1e4bda-DEL
+|   
+|_  (Request type: HEAD)
+|_http-generator: WordPress 7.0
+|_http-trane-info: Problem with XML parsing of /evox/about
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A
+|     cipher preference: client
+|_  least strength: A
+| ssl-cert: Subject: commonName=coindcx.com
+| Subject Alternative Name: DNS:*.coindcx.com, DNS:*.engage.coindcx.com, DNS:coindcx.com
+| Not valid before: 2026-06-08T20:30:26
+|_Not valid after:  2026-09-06T20:30:25
+|_http-title: Trade Bitcoin &amp; Buy Crypto with CoinDCX Crypto App
+| http-robots.txt: 44 disallowed entries (15 shown)
+| */buy */sell */insta/buy */insta/sell /cdn-cgi/rum 
+| */buy/MATICINR */buy/BRISEINR */buy/DOGEINR */buy/REEFINR 
+| */buy/LCXINR */buy/XRPINR */buy/SHIBUSDT */buy/BTCINR */buy/SOLINR 
+|_*/buy/BABYDOGEUSDT
+|_http-server-header: cloudflare
+8020/tcp open   http-proxy syn-ack ttl 63 FortiGuard Web Filtering
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+|_http-title: Web Filter Block Override
+| http-headers: 
+|   Content-Length: 4502
+|   Connection: close
+|   Cache-Control: no-cache
+|   Content-Type: text/html; charset=utf-8
+|   X-Frame-Options: SAMEORIGIN
+|   X-XSS-Protection: 1; mode=block
+|   X-Content-Type-Options: nosniff
+|   Content-Security-Policy: frame-ancestors 'self'
+|   
+|_  (Request type: GET)
+Device type: general purpose
+Running (JUST GUESSING): FreeBSD 12.X (87%), Apple macOS 11.X (86%)
+OS CPE: cpe:/o:freebsd:freebsd:12 cpe:/o:apple:mac_os_x:11
+Aggressive OS guesses: FreeBSD 12.1-RELEASE - 12.2-RELEASE (87%), FreeBSD 12.1-STABLE (87%), Apple macOS 11 (Big Sur) (Darwin 20.6.0) (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT     ADDRESS
+1   0.43 ms _gateway (192.168.74.254)
+2   0.25 ms 104.18.12.22
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 11 19:57:55 2026 -- 1 IP address (1 host up) scanned in 156.29 seconds

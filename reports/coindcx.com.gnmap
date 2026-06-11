@@ -1,0 +1,4 @@
+# Nmap 7.98 scan initiated Thu Jun 11 19:55:19 2026 as: nmap -sS -sV -O -Pn --reason --traceroute --version-all --script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 --min-rate 1000 -p 1-49152 -oX reports/coindcx.com.xml -oN reports/coindcx.com.txt -oG reports/coindcx.com.gnmap coindcx.com
+Host: 104.18.12.22 ()	Status: Up
+Host: 104.18.12.22 ()	Ports: 80/open/tcp//http//Cloudflare http proxy/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Cloudflare http proxy/, 8020/open/tcp//http-proxy//FortiGuard Web Filtering/	Ignored State: filtered (49148)	Seq Index: 259	IP ID Seq: All zeros
+# Nmap done at Thu Jun 11 19:57:55 2026 -- 1 IP address (1 host up) scanned in 156.29 seconds

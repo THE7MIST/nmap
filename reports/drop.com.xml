@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jun 11 19:49:35 2026 as: nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/drop.com.xml -oN reports/drop.com.txt -oG reports/drop.com.gnmap drop.com -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/drop.com.xml -oN reports/drop.com.txt -oG reports/drop.com.gnmap drop.com" start="1781187575" startstr="Thu Jun 11 19:49:35 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="49152" services="1-49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="SYN Stealth Scan" time="1781187605" percent="32.89" remaining="60" etc="1781187664"/>
+<taskprogress task="SYN Stealth Scan" time="1781187606" percent="34.02" remaining="59" etc="1781187664"/>
+<taskprogress task="SYN Stealth Scan" time="1781187606" percent="34.94" remaining="56" etc="1781187662"/>
+<taskprogress task="SYN Stealth Scan" time="1781187607" percent="35.88" remaining="56" etc="1781187662"/>
+<taskprogress task="SYN Stealth Scan" time="1781187608" percent="36.68" remaining="56" etc="1781187663"/>
+<host starttime="1781187576" endtime="1781187728"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="108.158.61.29" addrtype="ipv4"/>
+<hostnames>
+<hostname name="drop.com" type="user"/>
+<hostname name="server-108-158-61-29.bom78.r.cloudfront.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="49148">
+<extrareasons reason="no-response" count="49148" proto="tcp" ports="1-79,81-112,114-442,444-8019,8021-49152"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="243"/><service name="http" product="Amazon CloudFront httpd" method="probed" conf="10"/><script id="http-server-header" output="CloudFront"><elem>CloudFront</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="243"/><service name="http" product="Amazon CloudFront httpd" tunnel="ssl" method="probed" conf="10"/><script id="http-server-header" output="&#xa;  AmazonS3&#xa;  CloudFront"><elem>AmazonS3</elem>
+<elem>CloudFront</elem>
+</script><script id="ssl-cert" output="Subject: commonName=*.drop.com&#xa;Subject Alternative Name: DNS:*.drop.com, DNS:drop.com&#xa;Not valid before: 2025-12-24T00:00:00&#xa;Not valid after:  2027-01-21T23:59:59"><table key="subject">
+<elem key="commonName">*.drop.com</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Amazon RSA 2048 M01</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Amazon</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">E02B713976523B5F463BA3C0E0DAB61B52C8A751EFDFD2E90FAEC2EBBAEB686A087C79E3BD628439B033141B0D5485D1FAF6519AFE8A44849D5222587852F499F79096A95B2315DA185A37164F7EFF35D0F58E3FAE38B2B13678D2EE8E2A92B7EEF25A390A0A66109D03324C13F786AED72E24CD19B769D25946F0BF09CA8D5EB55D1E51D86983142EE4C6DBDB2DA9E9DE607CA3DA2AEDF3E5D4EB5F9C3B1575C8943E9B8AD4B4223AC8662356BC35A1889F4A27F9B45253A8B23C884585A47A2A3FA0EF125F8EBEC5ABAECD03164833EAA7122742F90926F0DA20CAF01C814F7A90D742D21FC9F1587443F547D6BED752609228160BD1838F0B260451E66183</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">81:B8:0E:63:8A:89:12:18:E5:FA:3B:3B:50:95:9F:E6:E5:90:13:85</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">FF:D0:3A:B8:27:19:C5:95:C6:CF:8F:A1:4F:A7:7A:1F:C6:3A:C8:9C</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:*.drop.com, DNS:drop.com</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://crl.r2m01.amazontrust.com/r2m01.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://ocsp.r2m01.amazontrust.com&#xa;CA Issuers - URI:http://crt.r2m01.amazontrust.com/r2m01.cer</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 4C:63:DC:98:E5:9C:1D:AB:88:F6:1E:8A:3D:DE:AE:8F:&#xa;                AB:44:A3:37:7B:5F:9B:94:C3:FB:A1:9C:FC:C1:BE:26&#xa;    Timestamp : Dec 24 01:25:17.996 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:21:00:CB:03:8F:F6:8E:EB:7F:CE:C9:BC:5B:&#xa;                4C:1C:00:4E:38:1B:4F:67:11:32:AB:2C:63:2A:64:25:&#xa;                CB:99:2A:90:B6:02:20:61:99:B9:15:ED:FF:E9:38:D2:&#xa;                D5:F4:0B:00:06:D6:9C:26:B2:E5:F1:4F:4F:15:10:6B:&#xa;                93:41:A6:B8:AB:1C:C4&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 1C:9F:68:2C:E9:FA:F0:45:69:50:F8:1B:96:8A:87:DD:&#xa;                DB:32:10:D8:4C:E6:C8:B2:E3:82:52:4A:C4:CF:59:9F&#xa;    Timestamp : Dec 24 01:25:17.983 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:21:00:93:45:DF:B2:E2:44:56:CE:69:41:40:&#xa;                1D:1E:63:4A:BA:30:40:B7:4D:BB:98:96:4C:4D:80:E3:&#xa;                6D:8E:88:F5:DA:02:20:20:B1:18:1C:3F:6A:5B:6B:21:&#xa;                FC:4B:07:F7:D7:F7:9F:BD:FA:44:0E:D2:79:F9:52:9F:&#xa;                78:53:4F:5C:57:C6:01&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 60:4C:9A:AF:7A:7F:77:5F:01:D4:06:FC:92:0D:C8:99:&#xa;                EB:0B:1C:7D:F8:C9:52:1B:FA:FA:17:77:3B:97:8B:C9&#xa;    Timestamp : Dec 24 01:25:18.236 2025 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:D7:CE:6E:43:85:FE:32:33:49:8B:DE:&#xa;                D2:84:D3:DE:F5:04:46:82:CC:D4:C0:0A:D8:E7:91:F0:&#xa;                D8:AF:22:67:BF:02:21:00:BB:0E:9F:C5:A6:CF:6E:FE:&#xa;                95:22:98:60:FF:54:C8:51:A7:CE:56:82:2A:90:06:B2:&#xa;                B9:AE:9D:F9:62:22:5B:F5</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-12-24T00:00:00</elem>
+<elem key="notAfter">2027-01-21T23:59:59</elem>
+</table>
+<elem key="md5">b32e284bb9e57d7bf81cd46f8fc8c18a</elem>
+<elem key="sha1">a0f290b9f6754005fe31a3d3be1e5fb4bf4ec506</elem>
+<elem key="sha256">d194904dbc464e23435737bdb40e824a54ad61dd33a5ec6eb35e188a62605bc9</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFwTCCBKmgAwIBAgIQAYJI7qsJIrAPCGHsP4rWdTANBgkqhkiG9w0BAQsFADA8&#xa;MQswCQYDVQQGEwJVUzEPMA0GA1UEChMGQW1hem9uMRwwGgYDVQQDExNBbWF6b24g&#xa;UlNBIDIwNDggTTAxMB4XDTI1MTIyNDAwMDAwMFoXDTI3MDEyMTIzNTk1OVowFTET&#xa;MBEGA1UEAwwKKi5kcm9wLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBAOArcTl2UjtfRjujwODathtSyKdR79/S6Q+uwuu662hqCHx5471ihDmwMxQb&#xa;DVSF0fr2UZr+ikSEnVIiWHhS9Jn3kJapWyMV2hhaNxZPfv810PWOP644srE2eNLu&#xa;jiqSt+7yWjkKCmYQnQMyTBP3hq7XLiTNGbdp0llG8L8Jyo1etV0eUdhpgxQu5Mbb&#xa;2y2p6d5gfKPaKu3z5dTrX5w7FXXIlD6bitS0IjrIZiNWvDWhiJ9KJ/m0UlOosjyI&#xa;RYWkeio/oO8SX46+xauuzQMWSDPqpxInQvkJJvDaIMrwHIFPepDXQtIfyfFYdEP1&#xa;R9a+11JgkigWC9GDjwsmBFHmYYMCAwEAAaOCAuQwggLgMB8GA1UdIwQYMBaAFIG4&#xa;DmOKiRIY5fo7O1CVn+blkBOFMB0GA1UdDgQWBBT/0Dq4JxnFlcbPj6FPp3ofxjrI&#xa;nDAfBgNVHREEGDAWggoqLmRyb3AuY29tgghkcm9wLmNvbTATBgNVHSAEDDAKMAgG&#xa;BmeBDAECATAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwOwYD&#xa;VR0fBDQwMjAwoC6gLIYqaHR0cDovL2NybC5yMm0wMS5hbWF6b250cnVzdC5jb20v&#xa;cjJtMDEuY3JsMHUGCCsGAQUFBwEBBGkwZzAtBggrBgEFBQcwAYYhaHR0cDovL29j&#xa;c3AucjJtMDEuYW1hem9udHJ1c3QuY29tMDYGCCsGAQUFBzAChipodHRwOi8vY3J0&#xa;LnIybTAxLmFtYXpvbnRydXN0LmNvbS9yMm0wMS5jZXIwDAYDVR0TAQH/BAIwADCC&#xa;AX8GCisGAQQB1nkCBAIEggFvBIIBawFpAHYATGPcmOWcHauI9h6KPd6uj6tEozd7&#xa;X5uUw/uhnPzBviYAAAGbTfXgLAAABAMARzBFAiEAywOP9o7rf87JvFtMHABOOBtP&#xa;ZxEyqyxjKmQly5kqkLYCIGGZuRXt/+k40tX0CwAG1pwmsuXxT08VEGuTQaa4qxzE&#xa;AHYAHJ9oLOn68EVpUPgbloqH3dsyENhM5siy44JSSsTPWZ8AAAGbTfXgHwAABAMA&#xa;RzBFAiEAk0XfsuJEVs5pQUAdHmNKujBAt027mJZMTYDjbY6I9doCICCxGBw/altr&#xa;IfxLB/fX95+9+kQO0nn5Up94U09cV8YBAHcAYEyar3p/d18B1Ab8kg3ImesLHH34&#xa;yVIb+voXdzuXi8kAAAGbTfXhHAAABAMASDBGAiEA185uQ4X+MjNJi97ShNPe9QRG&#xa;gszUwArY55Hw2K8iZ78CIQC7Dp/Fps9u/pUimGD/VMhRp85WgiqQBrK5rp35YiJb&#xa;9TANBgkqhkiG9w0BAQsFAAOCAQEAlYQPmqdWaUUN9ogTwH1aUJTj+Dz/vRTD7P7i&#xa;KdHTjVAdXVSneeI48I/E7drgrPDzO6vRkxTiUaVVN8LZviVq4LRUJfa+cHAkW2tf&#xa;+rX+EwJZo5ecSrmrYTCuBSj2yL6U3dUapxfJ2Sx4V5Le7Z5kHccMcD/EcgwsCQ+Q&#xa;p5O7oDteK77ihZqsfXmMbQtFrEG38XaZIJJOnZCfYD2X+QjyolBKNAqSLXgmy0iz&#xa;7bmHGRrYfyUWwll9UQKvlwuR57aX4oGAD/F+0rRGfHWLqUJIS6csdmUbb3bYZvvV&#xa;BxYCQGDoUjmhAHxWl+UE+utPpGqC36PEYjEfS3A9wfslaUU5Mw==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-headers" output="&#xa;  Content-Type: text/html&#xa;  Content-Length: 26932&#xa;  Connection: close&#xa;  Date: Wed, 10 Jun 2026 13:30:47 GMT&#xa;  Last-Modified: Wed, 27 May 2026 14:41:50 GMT&#xa;  ETag: &quot;16d66b96d10f30c3ff2c43e339262bf9&quot;&#xa;  Server: AmazonS3&#xa;  X-Cache: Hit from cloudfront&#xa;  Via: 1.1 1e8e398ee1186c75383bade3dffceaf6.cloudfront.net (CloudFront)&#xa;  X-Amz-Cf-Pop: BOM78-P4&#xa;  X-Amz-Cf-Id: Rsx39tnApDHeYpJOnZ6OaLG5a6P5I2Jh21GVq9sA1YAp5hbcSWEYMA==&#xa;  Age: 69621&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.3: &#xa;    ciphers: &#xa;      TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A&#xa;    cipher preference: server&#xa;  least strength: A"><table key="TLSv1.3">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="name">TLS_AKE_WITH_AES_128_GCM_SHA256</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="name">TLS_AKE_WITH_AES_256_GCM_SHA384</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+<elem key="name">TLS_AKE_WITH_CHACHA20_POLY1305_SHA256</elem>
+</table>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="http-title" output="Drop - Gaming Collaborations by Corsair"><elem key="title">Drop - Gaming Collaborations by Corsair</elem>
+</script></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="FortiGuard Web Filtering" method="probed" conf="10"/><script id="http-headers" output="&#xa;  Content-Length: 4499&#xa;  Connection: close&#xa;  Cache-Control: no-cache&#xa;  Content-Type: text/html; charset=utf-8&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  X-XSS-Protection: 1; mode=block&#xa;  X-Content-Type-Options: nosniff&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-title" output="Web Filter Block Override"><elem key="title">Web Filter Block Override</elem>
+</script><script id="http-open-proxy" output="Potentially OPEN proxy.&#xa;Methods supported:CONNECTION"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="113"/>
+</os>
+<uptime seconds="823" lastboot="Thu Jun 11 19:38:25 2026"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="C7856231,FF5C38A6,E5AE693A,6FEF53E8,8ABA0C13,F464CAEE"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="A5A989E6,A5A6E2BC,A4AA23F9,A6B146D4,A6AA6964,292D0F9B"/>
+<trace port="113" proto="tcp">
+<hop ttl="1" ipaddr="192.168.74.254" rtt="0.44" host="_gateway"/>
+<hop ttl="2" ipaddr="108.158.61.29" rtt="0.22" host="server-108-158-61-29.bom78.r.cloudfront.net"/>
+</trace>
+<times srtt="1730" rttvar="2409" to="100000"/>
+</host>
+<runstats><finished time="1781187728" timestr="Thu Jun 11 19:52:08 2026" summary="Nmap done at Thu Jun 11 19:52:08 2026; 1 IP address (1 host up) scanned in 153.50 seconds" elapsed="153.50" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

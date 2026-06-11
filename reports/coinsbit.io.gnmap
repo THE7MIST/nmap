@@ -1,0 +1,4 @@
+# Nmap 7.98 scan initiated Thu Jun 11 19:58:17 2026 as: nmap -sS -sV -O -Pn --reason --traceroute --version-all --script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 --min-rate 1000 -p 1-49152 -oX reports/coinsbit.io.xml -oN reports/coinsbit.io.txt -oG reports/coinsbit.io.gnmap coinsbit.io
+Host: 172.67.222.133 ()	Status: Up
+Host: 172.67.222.133 ()	Ports: 80/open/tcp//http//Cloudflare http proxy/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//Cloudflare http proxy/, 8020/open/tcp//http-proxy//FortiGuard Web Filtering/	Ignored State: filtered (49148)	Seq Index: 263	IP ID Seq: All zeros
+# Nmap done at Thu Jun 11 20:00:53 2026 -- 1 IP address (1 host up) scanned in 156.00 seconds

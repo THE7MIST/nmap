@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jun 11 20:00:57 2026 as: nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/sfox.com.xml -oN reports/sfox.com.txt -oG reports/sfox.com.gnmap sfox.com -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/sfox.com.xml -oN reports/sfox.com.txt -oG reports/sfox.com.gnmap sfox.com" start="1781188257" startstr="Thu Jun 11 20:00:57 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="49152" services="1-49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="NSE" time="1781188386" percent="98.62" remaining="1" etc="1781188387"/>
+<taskprogress task="NSE" time="1781188391" percent="98.85" remaining="1" etc="1781188392"/>
+<taskprogress task="NSE" time="1781188392" percent="98.85" remaining="1" etc="1781188393"/>
+<taskprogress task="NSE" time="1781188392" percent="98.85" remaining="1" etc="1781188393"/>
+<taskprogress task="NSE" time="1781188392" percent="98.85" remaining="1" etc="1781188393"/>
+<taskprogress task="NSE" time="1781188393" percent="98.85" remaining="1" etc="1781188394"/>
+<taskprogress task="NSE" time="1781188393" percent="98.85" remaining="1" etc="1781188394"/>
+<host starttime="1781188258" endtime="1781188414"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="104.18.20.120" addrtype="ipv4"/>
+<hostnames>
+<hostname name="sfox.com" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="49148">
+<extrareasons reason="no-response" count="49148" proto="tcp" ports="1-79,81-112,114-442,444-8019,8021-49152"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Cloudflare http proxy" method="probed" conf="10"/><script id="http-server-header" output="cloudflare"><elem>cloudflare</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Cloudflare http proxy" tunnel="ssl" method="probed" conf="10"/><script id="http-headers" output="&#xa;  Date: Thu, 11 Jun 2026 09:02:32 GMT&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  Content-Length: 143&#xa;  Connection: close&#xa;  Location: https://www.sfox.com/&#xa;  Strict-Transport-Security: max-age=2592000&#xa;  X-Content-Type-Options: nosniff&#xa;  set-cookie: __cf_bm=piLGJpC_TDrfRHx4gWyTWQNGVtaD5Zq8P.Ef305me3Q-1781168552.3979647-1.0.1.1-2btNY9_OKJ763aitPhX4x5ecbJp8MtW8WWggiZHyIirzpqoVslXf46kY.Is1qeJ7rCZTu0HFKH7jIFJz8NrXPOnzz4_dq.GK..Scj9PLbOpgnskGuHcWR.kzQE4dzvy2; HttpOnly; SameSite=None; Secure; Path=/; Domain=sfox.com; Expires=Thu, 11 Jun 2026 09:32:32 GMT&#xa;  Server: cloudflare&#xa;  CF-RAY: a09f6ffc7bebcf85-DEL&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="cloudflare"><elem>cloudflare</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;  TLSv1.3: &#xa;    ciphers: &#xa;      TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 2048</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<table key="TLSv1.3">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_AKE_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+</table>
+<table>
+<elem key="name">TLS_AKE_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+</table>
+<table>
+<elem key="name">TLS_AKE_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+</table>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="ssl-cert" output="Subject: commonName=sfox.com&#xa;Subject Alternative Name: DNS:*.qa01.sfox.com, DNS:*.qa0201.sfox.com, DNS:*.qa03.sfox.com, DNS:*.sfox.com, DNS:*.staging.sfox.com, DNS:sfox.com&#xa;Not valid before: 2026-05-24T15:46:36&#xa;Not valid after:  2026-08-22T15:46:35"><table key="subject">
+<elem key="commonName">sfox.com</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">E7</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Let&apos;s Encrypt</elem>
+</table>
+<table key="pubkey">
+<elem key="type">ec</elem>
+<elem key="bits">256</elem>
+<table key="ecdhparams">
+<table key="curve_params">
+<elem key="ec_curve_type">namedcurve</elem>
+<elem key="curve">prime256v1</elem>
+</table>
+</table>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">FD:B9:E7:5D:C8:D8:DE:95:A6:74:17:F3:23:CB:F5:54:2C:1F:9A:E7</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">AE:48:9E:DC:87:1D:44:A0:6F:DA:A2:E5:60:74:04:78:C2:9C:00:80</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:http://e7.i.lencr.org/</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:*.qa01.sfox.com, DNS:*.qa0201.sfox.com, DNS:*.qa03.sfox.com, DNS:*.sfox.com, DNS:*.staging.sfox.com, DNS:sfox.com</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://e7.c.lencr.org/110.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : C8:A3:C4:7F:C7:B3:AD:B9:35:6B:01:3F:6A:7A:12:6D:&#xa;                E3:3A:4E:43:A5:C6:46:F9:97:AD:39:75:99:1D:CF:9A&#xa;    Timestamp : May 24 16:45:06.232 2026 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:44:02:20:1A:8E:57:4B:96:75:9C:1F:2A:4B:84:62:&#xa;                40:64:2B:09:47:7A:00:23:FC:FC:6D:60:22:4F:03:E1:&#xa;                7E:99:24:9E:02:20:03:C8:54:6C:B1:D2:79:24:7A:12:&#xa;                38:B0:CE:6D:3D:2A:62:0C:C2:B0:B2:68:CA:C3:43:E6:&#xa;                51:08:CF:D6:36:C1&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : 1A:8B:9D:6B:0F:FE:BF:81:B4:79:39:C6:D2:31:0A:86:&#xa;                D6:D1:02:D4:F0:46:E2:18:2C:9D:E3:5F:5E:26:25:EF&#xa;    Timestamp : May 24 16:45:06.702 2026 GMT&#xa;    Extensions: 00:00:05:00:16:69:62:6B&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:BA:57:6B:7C:32:C4:B2:DD:B9:6D:67:&#xa;                01:33:85:24:7C:8D:68:F5:CA:22:FD:3F:92:94:87:23:&#xa;                10:B4:21:B1:1F:02:21:00:CC:3D:BF:75:62:3D:44:38:&#xa;                EA:76:71:85:64:C9:15:8E:87:54:32:78:02:8E:6C:1A:&#xa;                27:43:32:95:93:7B:44:17</elem>
+</table>
+</table>
+<elem key="sig_algo">ecdsa-with-SHA384</elem>
+<table key="validity">
+<elem key="notBefore">2026-05-24T15:46:36</elem>
+<elem key="notAfter">2026-08-22T15:46:35</elem>
+</table>
+<elem key="md5">c0980bcefbb8efbd41fd3990451d395f</elem>
+<elem key="sha1">f4820cb0771d12536652f108b09e679b4eb452ed</elem>
+<elem key="sha256">b637a3ae180ab13e3cb196102b0f98879d4e8f26d04e5fa497762efa4005c31f</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIID0jCCA1egAwIBAgISBqSFuoDLGYMzX1TRFcNVYeRtMAoGCCqGSM49BAMDMDIx&#xa;CzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJF&#xa;NzAeFw0yNjA1MjQxNTQ2MzZaFw0yNjA4MjIxNTQ2MzVaMBMxETAPBgNVBAMTCHNm&#xa;b3guY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEF96hSwmLrdwGrDcYfLpB&#xa;zgvJL2JCBlGSICaCOWe0MwP2Lq3SU09qVAuuVxCT7HSvMyDFHBso9a5ArhMo7DKn&#xa;k6OCAmowggJmMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDATAM&#xa;BgNVHRMBAf8EAjAAMB0GA1UdDgQWBBT9ueddyNjelaZ0F/Mjy/VULB+a5zAfBgNV&#xa;HSMEGDAWgBSuSJ7chx1EoG/aouVgdAR4wpwAgDAyBggrBgEFBQcBAQQmMCQwIgYI&#xa;KwYBBQUHMAKGFmh0dHA6Ly9lNy5pLmxlbmNyLm9yZy8waAYDVR0RBGEwX4IPKi5x&#xa;YTAxLnNmb3guY29tghEqLnFhMDIwMS5zZm94LmNvbYIPKi5xYTAzLnNmb3guY29t&#xa;ggoqLnNmb3guY29tghIqLnN0YWdpbmcuc2ZveC5jb22CCHNmb3guY29tMBMGA1Ud&#xa;IAQMMAowCAYGZ4EMAQIBMC4GA1UdHwQnMCUwI6AhoB+GHWh0dHA6Ly9lNy5jLmxl&#xa;bmNyLm9yZy8xMTAuY3JsMIIBDAYKKwYBBAHWeQIEAgSB/QSB+gD4AHUAyKPEf8ez&#xa;rbk1awE/anoSbeM6TkOlxkb5l605dZkdz5oAAAGeWuA/OAAABAMARjBEAiAajldL&#xa;lnWcHypLhGJAZCsJR3oAI/z8bWAiTwPhfpkkngIgA8hUbLHSeSR6Ejiwzm09KmIM&#xa;wrCyaMrDQ+ZRCM/WNsEAfwAai51rD/6/gbR5OcbSMQqG1tEC1PBG4hgsneNfXiYl&#xa;7wAAAZ5a4EEOAAgAAAUAFmliawQDAEgwRgIhALpXa3wyxLLduW1nATOFJHyNaPXK&#xa;Iv0/kpSHIxC0IbEfAiEAzD2/dWI9RDjqdnGFZMkVjodUMngCjmwaJ0MylZN7RBcw&#xa;CgYIKoZIzj0EAwMDaQAwZgIxAJNcAaEegoiSFroPPbGMztZ3MYF91at6Ea71XJPa&#xa;gBZf17PFw67SSi6l5llarzf8hQIxAOoZ4iR5ba0a8XCt41L7BAO5/xJfQDhi7gsx&#xa;nZ9C/BNoEs0aoZPjNQ/sToevSJnecA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-title" output="Did not follow redirect to https://www.sfox.com/"><elem key="redirect_url">https://www.sfox.com/</elem>
+</script></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="FortiGuard Web Filtering" method="probed" conf="10"/><script id="http-headers" output="&#xa;  Content-Length: 4499&#xa;  Connection: close&#xa;  Cache-Control: no-cache&#xa;  Content-Type: text/html; charset=utf-8&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  X-XSS-Protection: 1; mode=block&#xa;  X-Content-Type-Options: nosniff&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-title" output="Web Filter Block Override"><elem key="title">Web Filter Block Override</elem>
+</script><script id="http-open-proxy" output="Potentially OPEN proxy.&#xa;Methods supported:CONNECTION"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="113"/>
+<osmatch name="FreeBSD 12.1-RELEASE - 12.2-RELEASE" accuracy="87" line="28501">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="12.X" accuracy="87"><cpe>cpe:/o:freebsd:freebsd:12</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 12.1-STABLE" accuracy="87" line="28519">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="12.X" accuracy="87"><cpe>cpe:/o:freebsd:freebsd:12.1</cpe></osclass>
+</osmatch>
+<osmatch name="Apple macOS 11 (Big Sur) (Darwin 20.6.0)" accuracy="86" line="7875">
+<osclass type="general purpose" vendor="Apple" osfamily="macOS" osgen="11.X" accuracy="86"><cpe>cpe:/o:apple:mac_os_x:11</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="71" lastboot="Thu Jun 11 20:02:23 2026"/>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="D75EC4D8,FB8FC288,FBD379A0,3ECEE8B,FD0B4D70,B955B59F"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="1D3E82EB,726F3194,67F3E823,DB9C7B81,EE4AF616,631928DC"/>
+<trace port="113" proto="tcp">
+<hop ttl="1" ipaddr="192.168.74.254" rtt="0.55" host="_gateway"/>
+<hop ttl="2" ipaddr="104.18.20.120" rtt="0.23"/>
+</trace>
+<times srtt="10221" rttvar="16790" to="100000"/>
+</host>
+<runstats><finished time="1781188414" timestr="Thu Jun 11 20:03:34 2026" summary="Nmap done at Thu Jun 11 20:03:34 2026; 1 IP address (1 host up) scanned in 157.58 seconds" elapsed="157.58" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

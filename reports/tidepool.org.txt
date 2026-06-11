@@ -1,0 +1,78 @@
+# Nmap 7.98 scan initiated Thu Jun 11 19:52:29 2026 as: nmap -sS -sV -O -Pn --reason --traceroute --version-all --script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 --min-rate 1000 -p 1-49152 -oX reports/tidepool.org.xml -oN reports/tidepool.org.txt -oG reports/tidepool.org.gnmap tidepool.org
+Nmap scan report for tidepool.org (198.202.211.1)
+Host is up, received user-set (0.0092s latency).
+Not shown: 49148 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    REASON         VERSION
+80/tcp   open   http       syn-ack ttl 51 Cloudflare http proxy
+|_http-server-header: cloudflare
+113/tcp  closed ident      reset ttl 63
+443/tcp  open   ssl/http   syn-ack ttl 51 Cloudflare http proxy
+|_http-title: 406 - Not Acceptable
+| ssl-cert: Subject: commonName=tidepool.org
+| Subject Alternative Name: DNS:tidepool.org
+| Not valid before: 2026-05-19T00:43:36
+|_Not valid after:  2026-08-17T01:43:32
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A
+|     cipher preference: client
+|_  least strength: A
+| http-headers: 
+|   Date: Thu, 11 Jun 2026 08:54:13 GMT
+|   Content-Type: text/html; charset=utf-8
+|   Content-Length: 923
+|   Connection: close
+|   set-cookie: _cfuvid=RqNi.00qARbsgA846c_ruefprlvTySLrxcGZti04e7U-1781168052.7327404-1.0.1.1-mzyM6.mjR.bj8iCA_y2uHZSwk6kV94f4taP2swgM06g; HttpOnly; SameSite=None; Secure; Path=/; Domain=tidepool.org
+|   CF-Ray: a09f63c99d0c1f8f-DEL
+|   CF-Cache-Status: BYPASS
+|   ETag: "6a29da9e-39b"
+|   Server: cloudflare
+|   strict-transport-security: max-age=31536000; includeSubDomains; preload
+|   Vary: Accept-Encoding
+|   x-wf-region: us-east-1
+|   alt-svc: h3=":443"; ma=86400
+|   
+|_  (Request type: GET)
+|_http-server-header: cloudflare
+8020/tcp open   http-proxy syn-ack ttl 63 FortiGuard Web Filtering
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+|_http-title: Web Filter Block Override
+| http-headers: 
+|   Content-Length: 4503
+|   Connection: close
+|   Cache-Control: no-cache
+|   Content-Type: text/html; charset=utf-8
+|   X-Frame-Options: SAMEORIGIN
+|   X-XSS-Protection: 1; mode=block
+|   X-Content-Type-Options: nosniff
+|   Content-Security-Policy: frame-ancestors 'self'
+|   
+|_  (Request type: GET)
+Device type: general purpose|storage-misc
+Running (JUST GUESSING): FreeBSD 13.X|12.X|11.X (89%), NetApp Data ONTAP 9.X (86%)
+OS CPE: cpe:/o:freebsd:freebsd:13.1 cpe:/o:freebsd:freebsd:12 cpe:/o:freebsd:freebsd:11.0 cpe:/o:netapp:data_ontap:9.7
+Aggressive OS guesses: FreeBSD 13.1-RELEASE (89%), FreeBSD 12.1-RELEASE - 12.2-RELEASE (88%), FreeBSD 11.0-RELEASE (87%), FreeBSD 11.2-STABLE (87%), NetApp Data ONTAP 9.7 (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT     ADDRESS
+1   0.29 ms _gateway (192.168.74.254)
+2   0.21 ms 198.202.211.1
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 11 19:55:15 2026 -- 1 IP address (1 host up) scanned in 165.90 seconds

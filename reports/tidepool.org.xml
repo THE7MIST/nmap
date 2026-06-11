@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jun 11 19:52:29 2026 as: nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/tidepool.org.xml -oN reports/tidepool.org.txt -oG reports/tidepool.org.gnmap tidepool.org -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -O -Pn -&#45;reason -&#45;traceroute -&#45;version-all -&#45;script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/tidepool.org.xml -oN reports/tidepool.org.txt -oG reports/tidepool.org.gnmap tidepool.org" start="1781187749" startstr="Thu Jun 11 19:52:29 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="49152" services="1-49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="NSE" time="1781187853" percent="94.94" remaining="1" etc="1781187853"/>
+<taskprogress task="NSE" time="1781187857" percent="96.78" remaining="1" etc="1781187857"/>
+<host starttime="1781187754" endtime="1781187915"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="198.202.211.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="tidepool.org" type="user"/>
+</hostnames>
+<ports><extraports state="filtered" count="49148">
+<extrareasons reason="no-response" count="49148" proto="tcp" ports="1-79,81-112,114-442,444-8019,8021-49152"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Cloudflare http proxy" method="probed" conf="10"/><script id="http-server-header" output="cloudflare"><elem>cloudflare</elem>
+</script></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" product="Cloudflare http proxy" tunnel="ssl" method="probed" conf="10"/><script id="http-title" output="406 - Not Acceptable"><elem key="title">406 - Not Acceptable</elem>
+</script><script id="ssl-cert" output="Subject: commonName=tidepool.org&#xa;Subject Alternative Name: DNS:tidepool.org&#xa;Not valid before: 2026-05-19T00:43:36&#xa;Not valid after:  2026-08-17T01:43:32"><table key="subject">
+<elem key="commonName">tidepool.org</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">WE1</elem>
+<elem key="countryName">US</elem>
+<elem key="organizationName">Google Trust Services</elem>
+</table>
+<table key="pubkey">
+<elem key="type">ec</elem>
+<elem key="bits">256</elem>
+<table key="ecdhparams">
+<table key="curve_params">
+<elem key="ec_curve_type">namedcurve</elem>
+<elem key="curve">prime256v1</elem>
+</table>
+</table>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">D2:D2:93:B1:23:C6:D5:C3:50:E6:7C:B9:02:74:7B:72:CE:BD:C1:43</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">90:77:92:35:67:C4:FF:A8:CC:A9:E6:7B:D9:80:79:7B:CC:93:F9:38</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">OCSP - URI:http://o.pki.goog/s/we1/Aco&#xa;CA Issuers - URI:http://i.pki.goog/we1.crt</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:tidepool.org</elem>
+</table>
+<table>
+<elem key="name">X509v3 Certificate Policies</elem>
+<elem key="value">Policy: 2.23.140.1.2.1</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:http://c.pki.goog/we1/V4D0AIkfl2I.crl&#xa;</elem>
+</table>
+<table>
+<elem key="name">CT Precertificate SCTs</elem>
+<elem key="value">Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : D8:09:55:3B:94:4F:7A:FF:C8:16:19:6F:94:4F:85:AB:&#xa;                B0:F8:FC:5E:87:55:26:0F:15:D1:2E:72:BB:45:4B:14&#xa;    Timestamp : May 19 01:43:37.010 2026 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:45:02:20:5A:41:35:7D:FD:AF:88:B2:55:D9:1E:73:&#xa;                FD:DF:A6:80:95:F6:8A:6C:94:B2:E2:F2:27:9E:76:C3:&#xa;                53:FA:B7:0E:02:21:00:FB:02:FA:95:CF:DE:A1:F6:1D:&#xa;                D9:EA:7F:CC:FB:3C:9D:8A:FE:01:81:3A:D4:70:D0:08:&#xa;                D7:07:3C:3E:24:53:7B&#xa;Signed Certificate Timestamp:&#xa;    Version   : v1 (0x0)&#xa;    Log ID    : C2:31:7E:57:45:19:A3:45:EE:7F:38:DE:B2:90:41:EB:&#xa;                C7:C2:21:5A:22:BF:7F:D5:B5:AD:76:9A:D9:0E:52:CD&#xa;    Timestamp : May 19 01:43:36.985 2026 GMT&#xa;    Extensions: none&#xa;    Signature : ecdsa-with-SHA256&#xa;                30:46:02:21:00:CF:C5:5D:7D:DB:55:5E:94:5C:85:B2:&#xa;                5E:C5:25:29:5B:40:27:E5:C3:62:9B:07:2D:0E:50:C9:&#xa;                D9:60:C7:0C:46:02:21:00:F9:C4:C6:15:43:D6:27:63:&#xa;                9E:A8:3D:A7:C9:E5:5A:51:9F:F1:F6:49:EC:28:9F:B2:&#xa;                1B:48:8E:81:F8:D7:D4:F0</elem>
+</table>
+</table>
+<elem key="sig_algo">ecdsa-with-SHA256</elem>
+<table key="validity">
+<elem key="notBefore">2026-05-19T00:43:36</elem>
+<elem key="notAfter">2026-08-17T01:43:32</elem>
+</table>
+<elem key="md5">131ee138a974d4ec297054612828446a</elem>
+<elem key="sha1">2cefb9246f1424468cf7cab4c8e6be356a29e687</elem>
+<elem key="sha256">7aff83bcaa4f38477355696d64e4c57b85d6ef499de54cc65956907e5ee6cff1</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDlzCCAz6gAwIBAgIQAcoMxTMnvF0OJ+g8sXk81TAKBggqhkjOPQQDAjA7MQsw&#xa;CQYDVQQGEwJVUzEeMBwGA1UEChMVR29vZ2xlIFRydXN0IFNlcnZpY2VzMQwwCgYD&#xa;VQQDEwNXRTEwHhcNMjYwNTE5MDA0MzM2WhcNMjYwODE3MDE0MzMyWjAXMRUwEwYD&#xa;VQQDEwx0aWRlcG9vbC5vcmcwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAR/Vj6z&#xa;KQyHFtLqexqPT91bLhD8kkJCujYM9X5XOeiIcR6QBkfMA89q88aLRYFuAcdFV4/o&#xa;57G1J9gsLtibR2UJo4ICRjCCAkIwDgYDVR0PAQH/BAQDAgeAMBMGA1UdJQQMMAoG&#xa;CCsGAQUFBwMBMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFNLSk7EjxtXDUOZ8uQJ0&#xa;e3LOvcFDMB8GA1UdIwQYMBaAFJB3kjVnxP+ozKnme9mAeXvMk/k4MF4GCCsGAQUF&#xa;BwEBBFIwUDAnBggrBgEFBQcwAYYbaHR0cDovL28ucGtpLmdvb2cvcy93ZTEvQWNv&#xa;MCUGCCsGAQUFBzAChhlodHRwOi8vaS5wa2kuZ29vZy93ZTEuY3J0MBcGA1UdEQQQ&#xa;MA6CDHRpZGVwb29sLm9yZzATBgNVHSAEDDAKMAgGBmeBDAECATA2BgNVHR8ELzAt&#xa;MCugKaAnhiVodHRwOi8vYy5wa2kuZ29vZy93ZTEvVjREMEFJa2ZsMkkuY3JsMIIB&#xa;BQYKKwYBBAHWeQIEAgSB9gSB8wDxAHYA2AlVO5RPev/IFhlvlE+Fq7D4/F6HVSYP&#xa;FdEucrtFSxQAAAGePecdMgAABAMARzBFAiBaQTV9/a+IslXZHnP936aAlfaKbJSy&#xa;4vInnnbDU/q3DgIhAPsC+pXP3qH2Hdnqf8z7PJ2K/gGBOtRw0AjXBzw+JFN7AHcA&#xa;wjF+V0UZo0XufzjespBB68fCIVoiv3/Vta12mtkOUs0AAAGePecdGQAABAMASDBG&#xa;AiEAz8VdfdtVXpRchbJexSUpW0An5cNimwctDlDJ2WDHDEYCIQD5xMYVQ9YnY56o&#xa;PafJ5VpRn/H2Sewon7IbSI6B+NfU8DAKBggqhkjOPQQDAgNHADBEAh9eouA6FNY+&#xa;+ILyMm0fvxWch1CJ+cOSKdfAEzGRhj5+AiEAgFCe1MLCp9sd09E2wF3i3JwIxkV1&#xa;npiEiZ1khJJi2DI=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A&#xa;      TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.3: &#xa;    ciphers: &#xa;      TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A&#xa;      TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A&#xa;    cipher preference: client&#xa;  least strength: A"><table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">ecdh_x25519</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+</table>
+<table key="TLSv1.3">
+<table key="ciphers">
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_AKE_WITH_AES_128_GCM_SHA256</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_AKE_WITH_AES_256_GCM_SHA384</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+</table>
+<table>
+<elem key="strength">A</elem>
+<elem key="name">TLS_AKE_WITH_CHACHA20_POLY1305_SHA256</elem>
+<elem key="kex_info">X25519MLKEM768</elem>
+</table>
+</table>
+<elem key="cipher preference">client</elem>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="http-headers" output="&#xa;  Date: Thu, 11 Jun 2026 08:54:13 GMT&#xa;  Content-Type: text/html; charset=utf-8&#xa;  Content-Length: 923&#xa;  Connection: close&#xa;  set-cookie: _cfuvid=RqNi.00qARbsgA846c_ruefprlvTySLrxcGZti04e7U-1781168052.7327404-1.0.1.1-mzyM6.mjR.bj8iCA_y2uHZSwk6kV94f4taP2swgM06g; HttpOnly; SameSite=None; Secure; Path=/; Domain=tidepool.org&#xa;  CF-Ray: a09f63c99d0c1f8f-DEL&#xa;  CF-Cache-Status: BYPASS&#xa;  ETag: &quot;6a29da9e-39b&quot;&#xa;  Server: cloudflare&#xa;  strict-transport-security: max-age=31536000; includeSubDomains; preload&#xa;  Vary: Accept-Encoding&#xa;  x-wf-region: us-east-1&#xa;  alt-svc: h3=&quot;:443&quot;; ma=86400&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-server-header" output="cloudflare"><elem>cloudflare</elem>
+</script></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="FortiGuard Web Filtering" method="probed" conf="10"/><script id="http-open-proxy" output="Potentially OPEN proxy.&#xa;Methods supported:CONNECTION"/><script id="http-title" output="Web Filter Block Override"><elem key="title">Web Filter Block Override</elem>
+</script><script id="http-headers" output="&#xa;  Content-Length: 4503&#xa;  Connection: close&#xa;  Cache-Control: no-cache&#xa;  Content-Type: text/html; charset=utf-8&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  X-XSS-Protection: 1; mode=block&#xa;  X-Content-Type-Options: nosniff&#xa;  Content-Security-Policy: frame-ancestors &apos;self&apos;&#xa;  &#xa;  (Request type: GET)&#xa;"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="113"/>
+<osmatch name="FreeBSD 13.1-RELEASE" accuracy="89" line="28759">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="13.X" accuracy="89"><cpe>cpe:/o:freebsd:freebsd:13.1</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 12.1-RELEASE - 12.2-RELEASE" accuracy="88" line="28501">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="12.X" accuracy="88"><cpe>cpe:/o:freebsd:freebsd:12</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 11.0-RELEASE" accuracy="87" line="27944">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="11.X" accuracy="87"><cpe>cpe:/o:freebsd:freebsd:11.0</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 11.2-STABLE" accuracy="87" line="28228">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="11.X" accuracy="87"><cpe>cpe:/o:freebsd:freebsd:11.2</cpe></osclass>
+</osmatch>
+<osmatch name="NetApp Data ONTAP 9.7" accuracy="86" line="93321">
+<osclass type="storage-misc" vendor="NetApp" osfamily="Data ONTAP" osgen="9.X" accuracy="86"><cpe>cpe:/o:netapp:data_ontap:9.7</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="77" lastboot="Thu Jun 11 19:53:58 2026"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="8280D34A,243F3C10,441E2FDC,1C8A1B14,18A6E3B8,A5C12A59"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="6C356841,97C334FE,EF1A9CC0,64F33F66,94F241E,BE028C33"/>
+<trace port="113" proto="tcp">
+<hop ttl="1" ipaddr="192.168.74.254" rtt="0.29" host="_gateway"/>
+<hop ttl="2" ipaddr="198.202.211.1" rtt="0.21"/>
+</trace>
+<times srtt="9216" rttvar="14809" to="100000"/>
+</host>
+<runstats><finished time="1781187915" timestr="Thu Jun 11 19:55:15 2026" summary="Nmap done at Thu Jun 11 19:55:15 2026; 1 IP address (1 host up) scanned in 165.90 seconds" elapsed="165.90" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

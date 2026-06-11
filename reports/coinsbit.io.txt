@@ -1,0 +1,96 @@
+# Nmap 7.98 scan initiated Thu Jun 11 19:58:17 2026 as: nmap -sS -sV -O -Pn --reason --traceroute --version-all --script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 --min-rate 1000 -p 1-49152 -oX reports/coinsbit.io.xml -oN reports/coinsbit.io.txt -oG reports/coinsbit.io.gnmap coinsbit.io
+Nmap scan report for coinsbit.io (172.67.222.133)
+Host is up, received user-set (0.011s latency).
+Other addresses for coinsbit.io (not scanned): 104.21.54.22 2606:4700:3032::6815:3616 2606:4700:3031::ac43:de85
+Not shown: 49148 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    REASON         VERSION
+80/tcp   open   http       syn-ack ttl 51 Cloudflare http proxy
+|_http-server-header: cloudflare
+113/tcp  closed ident      reset ttl 63
+443/tcp  open   ssl/http   syn-ack ttl 51 Cloudflare http proxy
+| ssl-cert: Subject: commonName=coinsbit.io
+| Subject Alternative Name: DNS:coinsbit.io, DNS:*.coinsbit.io
+| Not valid before: 2026-04-17T13:59:37
+|_Not valid after:  2026-07-16T14:59:34
+|_http-generator: WordPress 7.0
+|_http-trane-info: Problem with XML parsing of /evox/about
+| http-headers: 
+|   Date: Thu, 11 Jun 2026 08:59:51 GMT
+|   Content-Type: text/html; charset=UTF-8
+|   Connection: close
+|   Server: cloudflare
+|   Link: <https://coinsbit.io/wp-json/>; rel="https://api.w.org/", <https://coinsbit.io/wp-json/wp/v2/pages/10>; rel="alternate"; title="JSON"; type="application/json", <https://coinsbit.io/>; rel=shortlink
+|   Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+|   Cf-Cache-Status: DYNAMIC
+|   Server-Timing: cfCacheStatus;desc="DYNAMIC"
+|   Server-Timing: cfEdge;dur=276,cfOrigin;dur=41
+|   Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=beLur2BABraaWze6mHBHzMkpVqXlcR0hdNbsE%2FW2Xk8DsIogZFVG2WNbuASO8hVTvD2gKA0il%2F8B%2BEQh7ABIEF5MlZQEg%2FayQmeYrUBoMJlRJvO7SB8VHakLT4nqcQ%3D%3D"}]}
+|   CF-RAY: a09f6c0ef80c867b-DEL
+|   alt-svc: h3=":443"; ma=86400
+|   
+|_  (Request type: HEAD)
+|_http-title: Best Bitcoin Casinos - Play Epic Crypto Casino Games in 2026
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (X25519MLKEM768) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (X25519MLKEM768) - A
+|     cipher preference: client
+|_  least strength: A
+|_http-server-header: cloudflare
+8020/tcp open   http-proxy syn-ack ttl 63 FortiGuard Web Filtering
+|_http-title: Web Filter Block Override
+| http-headers: 
+|   Content-Length: 4502
+|   Connection: close
+|   Cache-Control: no-cache
+|   Content-Type: text/html; charset=utf-8
+|   X-Frame-Options: SAMEORIGIN
+|   X-XSS-Protection: 1; mode=block
+|   X-Content-Type-Options: nosniff
+|   Content-Security-Policy: frame-ancestors 'self'
+|   
+|_  (Request type: GET)
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+Device type: media device|storage-misc|general purpose
+Running (JUST GUESSING): Google Android TV 11 (87%), Linux 4.X|5.X|2.6.X (87%), QNAP QTS 5.X (87%), Apple macOS 11.X (85%)
+OS CPE: cpe:/o:google:android_tv:11 cpe:/o:linux:linux_kernel:4.19 cpe:/o:qnap:qts:5.0 cpe:/o:linux:linux_kernel:5.10 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:apple:mac_os_x:11
+Aggressive OS guesses: Android TV OS 11 (Linux 4.19) (87%), QNAP QTS 5.0 (Linux 5.10) (87%), Linux 2.6.32 (86%), Apple macOS 11 (Big Sur) (Darwin 20.3.0) (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 113/tcp)
+HOP RTT     ADDRESS
+1   0.48 ms _gateway (192.168.74.254)
+2   0.24 ms 172.67.222.133
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 11 20:00:53 2026 -- 1 IP address (1 host up) scanned in 156.00 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.98 scan initiated Thu Jun 11 20:03:57 2026 as: nmap -sS -sV -O -Pn --reason --traceroute --version-all --script default,banner,http-title,http-headers,http-server-header,ssl-cert,ssl-enum-ciphers -T4 --min-rate 1000 -p 1-49152 -oX reports/winni.in.xml -oN reports/winni.in.txt -oG reports/winni.in.gnmap winni.in
+Host: 15.207.152.55 (ec2-15-207-152-55.ap-south-1.compute.amazonaws.com)	Status: Up
+Host: 15.207.152.55 (ec2-15-207-152-55.ap-south-1.compute.amazonaws.com)	Ports: 80/open/tcp//http//nginx 1.18.0 (Ubuntu)/, 113/closed/tcp//ident///, 443/open/tcp//ssl|http//nginx 1.18.0 (Ubuntu)/, 2000/open/tcp//cisco-sccp?///, 5060/open/tcp//sip?///, 8020/open/tcp//http-proxy//FortiGuard Web Filtering/	Ignored State: filtered (49146)	Seq Index: 263	IP ID Seq: All zeros
+# Nmap done at Thu Jun 11 20:14:22 2026 -- 1 IP address (1 host up) scanned in 625.02 seconds
