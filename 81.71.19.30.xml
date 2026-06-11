@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jun 11 15:23:55 2026 as: nmap -sS -sV -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/81.71.19.30.xml 81.71.19.30 -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/81.71.19.30.xml 81.71.19.30" start="1781171635" startstr="Thu Jun 11 15:23:55 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="49152" services="1-49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="81.71.19.30" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1781171636" endtime="1781171767"><status state="up" reason="reset" reason_ttl="41"/>
+<address addr="81.71.19.30" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="49147">
+<extrareasons reason="no-response" count="49147" proto="tcp" ports="1-20,22-79,81-112,114-442,444-8019,8021-49152"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="closed" reason="reset" reason_ttl="41"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="40"/><service name="http" product="Apache httpd" version="2.4.25" hostname="172.17.0.2" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="closed" reason="reset" reason_ttl="40"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="FortiGuard Web Filtering" method="probed" conf="10"/></port>
+</ports>
+<times srtt="272045" rttvar="19351" to="349449"/>
+</host>
+<runstats><finished time="1781171767" timestr="Thu Jun 11 15:26:07 2026" summary="Nmap done at Thu Jun 11 15:26:07 2026; 1 IP address (1 host up) scanned in 132.40 seconds" elapsed="132.40" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

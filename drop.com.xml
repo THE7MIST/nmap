@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.98 scan initiated Thu Jun 11 15:19:54 2026 as: nmap -sS -sV -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/drop.com.xml drop.com -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -T4 -&#45;min-rate 1000 -p 1-49152 -oX reports/drop.com.xml drop.com" start="1781171394" startstr="Thu Jun 11 15:19:54 2026" version="7.98" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="49152" services="1-49152"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="108.158.61.29" addrtype="ipv4"/>
+<hostnames>
+<hostname name="drop.com" type="user"/>
+</hostnames>
+</hosthint>
+<host starttime="1781171395" endtime="1781171498"><status state="up" reason="syn-ack" reason_ttl="243"/>
+<address addr="108.158.61.29" addrtype="ipv4"/>
+<hostnames>
+<hostname name="drop.com" type="user"/>
+<hostname name="server-108-158-61-29.bom78.r.cloudfront.net" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="49148">
+<extrareasons reason="no-response" count="49148" proto="tcp" ports="1-79,81-112,114-442,444-8019,8021-49152"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="243"/><service name="http" product="Amazon CloudFront httpd" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="113"><state state="closed" reason="reset" reason_ttl="63"/><service name="ident" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="242"/><service name="http" product="Amazon CloudFront httpd" tunnel="ssl" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="8020"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http-proxy" product="FortiGuard Web Filtering" method="probed" conf="10"/></port>
+</ports>
+<times srtt="543" rttvar="201" to="100000"/>
+</host>
+<runstats><finished time="1781171498" timestr="Thu Jun 11 15:21:38 2026" summary="Nmap done at Thu Jun 11 15:21:38 2026; 1 IP address (1 host up) scanned in 104.14 seconds" elapsed="104.14" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
